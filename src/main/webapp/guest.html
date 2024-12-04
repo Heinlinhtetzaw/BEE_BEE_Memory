@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To Bee Bee Memory</title>
+    <link rel="icon" href="images/brain2.png">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/tooltip.js"></script>
+    <!-- Bootstrap Link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- End of Bootstrap link  -->
+    <!-- font-awesome link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body class="body">
+    <!-- Navbar -->
+    <div class="navbar container-fluid" id="guest">
+        <div class="brand">
+            <div><img src="images/brain2.png" alt="logo"></div>
+            <div class="logotext"><span>Bee Bee</span> Memory</div>
+        </div>
+        <div class="navtext">
+            <ul>
+                <li class="active1"><a href="guest.html" id="home"><i class="fa-sharp fa-solid fa-house"></i>&nbsp;Home</a></li>
+                <li><a href="#guestaboutgame"><i class="fa-solid fa-bars"></i>&nbsp;About Games</a></li>
+                <li><a href="#guestgame"><i class="fa-solid fa-gamepad"></i>&nbsp;Games</a></li>
+                <li><a class="notallowed" href="#" data-bs-toggle="tooltip" title="You need to login first !"><i class="fa-solid fa-user"></i>&nbsp;Profile</a></li>
+                <li><a class="notallowed" href="#" data-bs-toggle="tooltip" title="You need to login first !"><i class="fa-solid fa-star"></i>&nbsp;Leaderboard</a></li>
+                <li><a href="#guestcontact"><i class="fa-solid fa-address-book"></i>&nbsp;Contact</a></li>
+                <!-- Down Button  -->
+                <li class="active2"><a href="Login.jsp">Login</a>
+                </li>
+                <!-- modal  -->
+                <div class="modal fade" id="modal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="text-danger">Bee Bee Memory</div>
+                                <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h4 class="text-center">You need to login first !</h4>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="" class="btn btn-danger btn-sm">Login</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of modal  -->
+            </ul>
+        </div>
+    </div>
+    <!-- End of Navbar -->
+    <!-- Guest Body Text  -->
+    <div class="guestbodytext container">
+        <h1 class="text-center"><img src="images/brain8.png" alt="img" width="100px"> Welcome To Bee Bee Memory <img src="images/brain8.png" alt="img" width="100px"></h1>
+        <h2 class="text-center">Boost Your Brain Power !!!</h2>
+        <div class="button text-center mt-4"><a href="#guestaboutgame" class="btn">Start Now</a></div>
+    </div>
+    <!-- End of Guest Body Text -->
+    
+    <!-- Guest About Game  -->
+    <div class="container mt-3" id="guestaboutgame">
+        <div class="row">
+            <h1 class="text-center alert-danger rounded p-3">About Game</h1>
+        </div>
+    </div>
+
+    <div class="guestaboutgame container">
+        <div class="guestaboutrow row justify-content-evenly mt-3">
+            <div class="guestcard card col-3">
+                <div class="card-body">
+                    <div class="card-title">
+                        <img src="images/visual1.png" alt="" class="rounded">
+                    </div>
+                    <div class="card-text text-center">
+                        <h4>Visual Memory Test</h4>
+                        <button class="btn btn-outline-danger btn-lg" data-bs-target="#modal2" data-bs-toggle="modal">About Game</button>
+                    </div>
+                    <!-- modal  -->
+                    <div class="modal fade" id="modal2">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Visual Memory Test Game</h2>
+                                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Visual number Game is a classic math puzzle game. Tap and move the wood number tiles, enjoy the magic of digit, coordinate your eyes, hands and brain. Challenge your logic and brainpower.You need to focus & challenge your self to solved as soon as you can.
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#" class="btn btn-outline-danger" data-bs-dismiss="modal">Cancel</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of modal  -->
+                </div>
+            </div>
+
+            <div class="guestcard card col-3">
+                <div class="card-body">
+                    <div class="card-title">
+                        <img src="images/guessnumberimg.jpg" alt="" class="rounded">
+                    </div>
+                    <div class="card-text text-center">
+                        <h3>Guess Number</h3>
+                        <button class="btn btn-outline-danger btn-lg" data-bs-target="#modal1" data-bs-toggle="modal">About Game</button>
+                    </div>
+                    <!-- modal  -->
+                    <div class="modal fade" id="modal1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Guess Number Game</h2>
+                                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    It is a game where you have to guess words within the specified number of points. As a hint, it is indicated that the number you entered is too high or too low. If the number you entered is correct, the game screen will turn green.
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#" class="btn btn-outline-danger" data-bs-dismiss="modal">Cancel</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of modal  -->
+                </div>
+            </div>
+
+            <div class="guestcard card col-3">
+                <div class="card-body">
+                    <div class="card-title">
+                        <img src="images/numpuzzle.png" alt="" class="rounded">
+                    </div>
+                    <div class="card-text text-center">
+                        <h3>Puzzle</h3>
+                        <button class="btn btn-outline-danger btn-lg" data-bs-target="#modal3" data-bs-toggle="modal">About Game</button>
+                    </div>
+                    <!-- modal  -->
+                    <div class="modal fade" id="modal3">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Puzzle Game</h2>
+                                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    In this game, just as the given numbers are arranged to match the color of the dice, in this game, the numbers are placed in the same order.
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#" class="btn btn-outline-danger" data-bs-dismiss="modal">Cancel</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of modal  -->
+                </div>
+            </div>
+        </div>
+
+        <div class="guestaboutrow row justify-content-evenly mt-3">
+            <div class="guestcard card col-3">
+                <div class="card-body">
+                    <div class="card-title">
+                        <img src="images/2playertictatoe1.png" alt="" class="rounded">
+                    </div>
+                    <div class="card-text text-center">
+                        <h3>Tic Ta Toe</h3>
+                        <button class="btn btn-outline-danger btn-lg" data-bs-target="#modal4" data-bs-toggle="modal">About Game</button>
+                    </div>
+                    <!-- modal  -->
+                    <div class="modal fade" id="modal4">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Tic Ta Toe Game</h2>
+                                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Fill all within the square bar must be filled with X or O adjacent to the row or column .X or O must be aligned with the horizontal row or diagonal row.
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#" class="btn btn-outline-danger" data-bs-dismiss="modal">Cancel</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of modal  -->
+                </div>
+            </div>
+
+            <div class="guestcard card col-3">
+                <div class="card-body">
+                    <div class="card-title">
+                        <img src="images/typing.jpg" alt="" class="rounded">
+                    </div>
+                    <div class="card-text text-center">
+                        <h3>Typing</h3>
+                        <button class="btn btn-outline-danger btn-lg" data-bs-target="#modal5" data-bs-toggle="modal">About Game</button>
+                    </div>
+                    <!-- modal  -->
+                    <div class="modal fade" id="modal5">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Typing Game</h2>
+                                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    The Typing game that helps you practice and improve your typing skills on your mobile phone or tablet in order to type faster and more accurately.
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#" class="btn btn-outline-danger" data-bs-dismiss="modal">Cancel</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of modal  -->
+                </div>
+            </div>
+
+            <div class="guestcard card col-3">
+                <div class="card-body">
+                    <div class="card-title">
+                        <img src="images/sps.jpg" alt="" class="rounded">
+                    </div>
+                    <div class="card-text text-center">
+                        <h4>Stone-Paper-Scissor</h4>
+                        <button class="btn btn-outline-danger btn-lg" data-bs-target="#modal6" data-bs-toggle="modal">About Game</button>
+                    </div>
+                    <!-- modal  -->
+                    <div class="modal fade" id="modal6">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Stone-Paper-Scissor Game</h2>
+                                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Stone paper scissors game featuring a scoreboard and two game modes: for one player, in which the player faces the computer, and also for two players, who face each other in an exciting online match.
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#" class="btn btn-outline-danger" data-bs-dismiss="modal">Cancel</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of modal  -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Guest About Game  -->
+
+    <!-- Guest Games  -->
+    <div class="container mt-3" id="guestgame">
+        <div class="row">
+            <h1 class="text-center alert-danger rounded p-3">Guest Games</h1>
+        </div>
+    </div>
+
+    <!-- Game Button  -->
+    <div class="gamebutton container alert-danger p-3 mt-2" id="gamebutton">
+        <ul class="text-center">
+            <li><a href="#visualmemorytest" class="btn col-2 p-3">Visual Memory Test</a></li>
+            <li><a href="#guessnumber" class="btn col-2 p-3">Guess Number</a></li>
+            <li><a href="#puzzle" class="btn col-2 p-3">Puzzle</a></li>
+        </ul>
+        <ul class="text-center">
+            <li><a href="#tictatoe" class="btn col-2 p-3">Tic Ta Toe</a></li>
+            <li><a href="#typing" class="btn col-2 p-3">Typing</a></li>
+            <li><a href="#stonepaperscissor" class="btn col-3 p-3">Stone-Paper-Scissor</a></li>
+        </ul>
+    </div>
+    <!-- End of Game Button  -->
+    <!--  Game  -->
+    <div class="gamebox-container container">
+        <!-- Visual Memory Test Game  -->
+        <div class="gamebox">
+            <div class="colorcardpf gameprofile container bg-secondary text-light p-3 mt-4" id="visualmemorytest">
+                <div class="row justify-content-evenly p-3">
+                    <div class="image col-5">
+                        <img src="images/visual1.png" alt="" class="rounded">
+                    </div>
+                    
+                    <div class="gameinfo col-5 pt-4">
+                        <!-- Game Name  -->
+                        <h2 class="justify-content-center">Visual Memory Text Game </h2>
+                        <!-- Age Level  -->
+                        <h2>Recommend For Guest Players</h2>
+                        <!-- About Game card  -->
+                        <div class="card bg-info text-light">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h2>How to play?</h2>
+                                </div>
+                                <div class="card-text text-justify">
+                                    <div>
+                                        Visual number Game is a classic math puzzle game. Tap and move the wood number tiles, enjoy the magic of digit, coordinate your eyes, hands and brain. Challenge your logic and brainpower.You need to focus & challenge your self to solved as soon as you can.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Play Button  -->
+                        <div class="playbutton">
+                            <div class="button mt-3 ">
+                                <div class="row">
+                                    <a href="visualmemorytestpf.html#visualmemorytestpf" class="exitandplay btn btn-outline-info col-4 p-3 text-light" 
+                                    data-bs-toggle="tooltip" title="Visual Memory Test Profile">Profile</a>
+                                    <a href="./Guest5game/visual.html" class="exitandplay btn btn-info col-4 p-3 text-light">Play Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Guess Number Game  -->
+        <div class="gamebox">
+            <div class="mathpf gameprofile container text-light bg-secondary p-3 mt-4" id="guessnumber">
+                <div class="row justify-content-evenly p-3">
+                    <div class="image col-5">
+                        <img src="images/guessnumberimg.jpg" alt="" class="rounded">
+                    </div>
+                    
+                    <div class="gameinfo col-5 pt-4">
+                        <!-- Game Name  -->
+                        <h1 class="justify-content-center">Guess Number Game </h1>
+                        <!-- Age Level  -->
+                        <h2>Recommend For Guest Players</h2>
+                        <!-- About Game card  -->
+                        <div class="card bg-info text-light">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h2>How to play?</h2>
+                                </div>
+                                <div class="card-text text-justify">
+                                    <div>
+                                        It is a game where you have to guess words within the specified number of points. As a hint, it is indicated that the number you entered is too high or too low. If the number you entered is correct, the game screen will turn green.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Play Button  -->
+                        <div class="playbutton">
+                            <div class="button mt-3">
+                                <div class="row">
+                                    <a href="guessnumberpf.html#guessnumberpf" class="exitandplay btn btn-outline-info col-4 p-3 text-light" 
+                                    data-bs-toggle="tooltip" title="Guess Number Profile">Profile</a>
+                                    
+                                    <a href="./Guest5game/guessnumber.html" class="exitandplay btn btn-info col-4 p-3 text-light">Play Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Puzzle Game  -->
+        <div class="gamebox">
+            <div class="fruitcardkidspf gameprofile container bg-secondary text-light p-3 mt-4" id="puzzle">
+                <div class="row justify-content-evenly p-3">
+                    <div class="image col-5">
+                        <img src="images/numpuzzle.png" alt="" class="rounded">
+                    </div>
+                    
+                    <div class="gameinfo col-5 pt-4">
+                        <!-- Game Name  -->
+                        <h1 class="justify-content-center">Puzzle Game </h1>
+                        <!-- Age Level  -->
+                        <h2>Recommend For Guest Players</h2>
+                        <!-- About Game card  -->
+                        <div class="card bg-info text-light">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h2>How to play?</h2>
+                                </div>
+                                <div class="card-text text-justify">
+                                    <div>
+                                        In this game, just as the given numbers are arranged to match the color of the dice, in this game, the numbers are placed in the same order.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Play Button  -->
+                        <div class="playbutton">
+                            <div class="button mt-3 ">
+                                <div class="row">
+                                    <a href="puzzlepf.html#puzzlepf" class="exitandplay btn btn-outline-info col-4 p-3 text-light" 
+                                    data-bs-toggle="tooltip" title="Puzzle Profile">Profile</a>
+                                    <a href="./Guest5game/shuffle.html" class="exitandplay btn btn-info col-4 p-3 text-light">Play Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Tic Ta Toe Game  -->
+        <div class="gamebox">
+            <div class="guesswordkidspf gameprofile container text-light bg-secondary p-3 mt-4" id="tictatoe">
+                <div class="row justify-content-evenly p-3">
+                    <div class="image col-5">
+                        <img src="images/2playertictatoe1.png" alt="" class="rounded">
+                    </div>
+                    
+                    <div class="gameinfo col-5 pt-4">
+                        <!-- Game Name  -->
+                        <h1 class="justify-content-center">Tic Ta Toe Game </h1>
+                        <!-- Age Level  -->
+                        <h2>Recommend For Guest Players</h2>
+                        <!-- About Game card  -->
+                        <div class="card bg-info text-light">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h2>How to play?</h2>
+                                </div>
+                                <div class="card-text text-justify">
+                                    <div>
+                                        Fill all within the square bar must be filled with X or O adjacent to the row or column .X or O must be aligned with the horizontal row or diagonal row.                                   
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Play Button  -->
+                        <div class="playbutton">
+                            <div class="button mt-3 ">
+                                <div class="row">
+                                    <a href="guesttictatoepf.html#guesttictatoepf" class="exitandplay btn btn-outline-info col-4 p-3 text-light" 
+                                    data-bs-toggle="tooltip" title="Tic Ta Toe Profile">Profile</a>
+                                    <a href="./Guest5game/TicTaToe.html" class="exitandplay btn btn-info col-4 p-3 text-light">Play Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Typing Game  -->
+        <div class="gamebox">
+            <div class="wordscramblekidspf gameprofile container bg-secondary text-light p-3 mt-4" id="typing">
+                <div class="row justify-content-evenly p-3">
+                    <div class="image col-5">
+                        <img src="images/typing.jpg" alt="" class="rounded">
+                    </div>
+                    
+                    <div class="gameinfo col-5 pt-4">
+                        <!-- Game Name  -->
+                        <h1 class="justify-content-center">Typing Game </h1>
+                        <!-- Age Level  -->
+                        <h2>Recommend For Guest Players</h2>
+                        <!-- About Game card  -->
+                        <div class="card bg-info text-light">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h2>How to play?</h2>
+                                </div>
+                                <div class="card-text text-justify">
+                                    <div>
+                                        The Typing game that helps you practice and improve your typing skills on your mobile phone or tablet in order to type faster and more accurately.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Play Button  -->
+                        <div class="playbutton">
+                            <div class="button mt-3 ">
+                                <div class="row">
+                                    <a href="typingpf.html#typingpf" class="exitandplay btn btn-outline-info col-4 p-3 text-light" 
+                                    data-bs-toggle="tooltip" title="Typing Profile">Profile</a>
+                                    <a href="./Guest5game/typing.html" class="exitandplay btn btn-info col-4 p-3 text-light">Play Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Stone-Paper-Scissor Game  -->
+        <div class="gamebox">
+            <div class="wordscramblekidspf gameprofile container bg-secondary text-light p-3 mt-4" id="stonepaperscissor">
+                <div class="row justify-content-evenly p-3">
+                    <div class="image col-5">
+                        <img src="images/sps.jpg" alt="" class="rounded">
+                    </div>
+                    
+                    <div class="gameinfo col-5 pt-4">
+                        <!-- Game Name  -->
+                        <h2 class="justify-content-center">Stone-Paper-Scissor Game </h2>
+                        <!-- Age Level  -->
+                        <h2>Recommend For Guest Players</h2>
+                        <!-- About Game card  -->
+                        <div class="card bg-info text-light">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h2>How to play?</h2>
+                                </div>
+                                <div class="card-text text-justify">
+                                    <div>
+                                        Stone paper scissors game featuring a scoreboard and two game modes: for one player, in which the player faces the computer, and also for two players, who face each other in an exciting online match.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Play Button  -->
+                        <div class="playbutton">
+                            <div class="button mt-3 ">
+                                <div class="row">
+                                    <a href="stonepaperscissorpf.html#stonepaperscissorpf" class="exitandplay btn btn-outline-info col-4 p-3 text-light" 
+                                    data-bs-toggle="tooltip" title="Stone-Paper-Scissor Profile">Profile</a>
+                                    <a href="./Guest5game/stone.html" class="exitandplay btn btn-info col-4 p-3 text-light">Play Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- End of Kids Level Game  -->
+    <!-- End of Guest Games  -->
+
+    <!-- Contact us -->
+    <!-- Contact header  -->
+    <div class="container mt-2" id="guestcontact">
+       <div class="row ">
+        <h1 class="text-center text-white bg-secondary p-3 rounded">Contact Us</h1>
+       </div>
+    </div>
+    <!-- End of Contact header  -->
+    <!-- Contact Address  -->
+    <div class="guestcontact container">
+        <div class="address">
+            <div class="addressrow row col-8 mt-4">
+                <div class="contacticon col-1">
+                    <button class="location btn btn-outline-danger btn-lg mt-1"><i class="fa-solid fa-location-dot"></i></button>
+                </div>
+                <div class="contacttext col-10">
+                    <h4>Address</h4>
+                    <div class="addresstext">Kyawt Phyu Taung Road, University of Computer Studies (Myeik)</div>
+                </div>
+            </div>
+            <div class="addressrow row col-8 mt-4">
+                <div class="contacticon col-1">
+                    <button class="btn btn-outline-danger btn-lg mt-1"><i class="fa-solid fa-envelope"></i></button>
+                </div>
+                <div class="contacttext col-10">
+                    <h4>Mail</h4>
+                    <div class="addresstext">mmgeaindimoe@gmail.com</div>
+                </div>
+            </div>
+            <div class="addressrow row col-8 mt-4">
+                <div class="contacticon col-1">
+                    <button class="btn btn-outline-danger btn-lg mt-1"><i class="fa-solid fa-phone"></i></button>
+                </div>
+                <div class="contacttext col-10">
+                    <h4>Phone</h4>
+                    <div class="addresstext">+95 9764632605/ +95 9670746930</div>
+                </div>
+            </div>
+            <div class="addressrow row col-8 mt-4">
+                <div class="contacticon col-1">
+                    <button class="btn btn-outline-danger btn-lg mt-1"><i class="fa-solid fa-clock"></i></button>
+                </div>
+                <div class="contacttext col-10">
+                    <h4>Time</h4>
+                    <div class="addresstext">Mon to Fri: 8:00AM to 5:00PM</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contactimage">
+        <img src="images/brain2.png" alt="">
+    </div>
+    <!-- End of Contact Address  -->
+    <!-- End of Contact us  -->
+
+    <!-- Up Button -->
+    <div class="up">
+        <a href="#guest" class="btn btn-danger" 
+        data-bs-toggle="tooltip" title="Up"><i class="fa-solid fa-arrow-up"></i></a> 
+    </div>
+    <!-- End of Up Button  -->
+
+    <!-- Footer -->
+    <div class="container-fluid bg-dark mt-3" id="footer">
+        <div class="footerlogo row">
+            <h2 class="col-4" data-bs-toggle="tooltip" title="Our Website"><img src="images/brain2.png" alt="" width="50px">Bee Bee Memory</h2>
+        </div>
+        <div class="row bg-dark text-white justify-content-evenly p-4">
+            <div class="r2 col-3">
+                <img src="images/brain2.png" alt="" class="col-10">
+            </div>
+            <div class="r1 col-3 row">
+                <h3>Contact Us</h3>
+                <ul class="col-12">
+                    
+                    <li><a class="btn btn-outline-danger" href="index.html#index" data-bs-toggle="tooltip" title="Facebook: Bee Bee Memory"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a class="btn btn-outline-danger" href="aboutgame.html#aboutgame" data-bs-toggle="tooltip" title="Messenger: Bee Bee Memory"><i class="fa-brands fa-facebook-messenger"></i></a></li>
+                    <li><a class="btn btn-outline-danger" href="game.html#game" data-bs-toggle="tooltip" title="Instagram: Bee Bee Memory"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a class="btn btn-outline-danger" href="profile.html#profile" data-bs-toggle="tooltip" title="Telegram: Bee Bee Memory"><i class="fa-brands fa-telegram"></i></a></li>
+                    
+                </ul>
+                
+            </div>
+            <div class="r2 col-3">
+                <ul>
+                    <h3>Website Links</h3>
+                    <li><a href="guest.html#guest">Home</a></li>
+                    <li><a href="guest.html#guestaboutgame">About Games</a></li>
+                    <li><a href="guest.html#guestgame">Games</a></li>
+                    <li><a href="guest.html#guestcontact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="r3 col-3">    
+                <ul>
+                    <h3>Game Links</h3>
+                    <li><a href="visualmemorytestpf.html#visualmemorytestpf">Visual Memory Test Game</a></li>
+                    <li><a href="guessnumberpf.html#guessnumberpf">Guess Number Game</a></li>
+                    <li><a href="puzzlepf.html#puzzlepf">Puzzle Game</a></li>
+                    <li><a href="guesttictatoepf.html#guesttictatoepf">Tic Ta Toe Game</a></li>
+                    <li><a href="typingpf.html#typingpf">Typing Game</a></li>
+                    <li><a href="stonepaperscissorpf.html#stonepaperscissorpf">Stone-Paper-Scissor</a></li>
+                </ul>
+            </div>
+
+        </div>
+        
+    </div>
+    <div class="container-fluid bg-danger">
+        <div class="footertext column p-2 text-white text-center">
+            <h5 >&copy; copyright! all right reserved</h5>
+            <h6 >Designed By Bee Bee Memory</h6>
+        </div>
+    </div>
+    <!-- End of Footer -->
+</body>
+</html>

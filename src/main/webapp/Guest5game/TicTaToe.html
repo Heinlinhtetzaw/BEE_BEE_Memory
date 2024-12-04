@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe @Gogila._</title>
+    <link rel="stylesheet" href="TicTaToe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <div class="container">
+       
+        <div class="game-board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+        <div class="scoreboard">
+            <div >Player (X): <span id="player-score">0</span></div>
+            <div >Tie: <span id="tie-score">0</span></div>
+            <div>Computer (O): <span id="computer-score">0</span></div>
+        </div>
+        <!-- <button id="restart-btn">Restart</button>
+         <button id="sound-btn">Sound: On</button> -->
+        
+         <div class="buttons">
+        <button id="restart-btn">Restart</button>
+         <button id="sound-btn">Sound: On</button>
+          </div>
+    </div>
+   
+    <script >
+        const cells = document.querySelectorAll('.cell');
+const playerScoreElem = document.getElementById('player-score');
+const computerScoreElem = document.getElementById('computer-score');
+const tieScoreElem = document.getElementById('tie-score');
+const restartBtn = document.getElementById('restart-btn');
+const soundBtn = document.getElementById('sound-btn');
+
+let board = ['', '', '', '', '', '', '', '', ''];
+let currentPlayer = 'X';
+let scores = { player: 0, computer: 0, tie: 0 };
+let isSoundOn = true;
+
+const winningCombinations = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+];
+
+// Audio elements.....
+const placeSound = new Audio('https://actions.google.com/sounds/v1/alarms/beep_short.ogg');
+const winSound = new Audio('https://freesound.org/people/DeletedUser1115286/sounds/455921/download/455921__deleteduser1115286__success-fanfare-trumpets.mp3');
+const tieSound = new Audio('https://freesound.org/people/ProjectsU012/sounds/341695/download/341695__projectsu012__retro-game-over.wav');
+
+cells.forEach(cell => cell.addEventListener('click', handlePlayerMove));
+restartBtn.addEventListener('click', restartGame);
+soundBtn.addEventListener('click', toggleSound);
+
+function handlePlayerMove(event) {
+    const index = event.target.getAttribute('data-index');
+    if (board[index] !== '' || checkWin() || checkTie()) return;
+    board[index] = currentPlayer;
+    event.target.textContent = currentPlayer;
+    event.target.classList.add('played', currentPlayer.toLowerCase());
+    playPlaceSound(); // Play sound when a move is placed
+
+    if (checkWin()) {
+        updateScore('player');
+        playWinSound(); // Play win sound
+        return;
+    }
+    if (checkTie()) {
+        updateScore('tie');
+        playTieSound(); // Play tie sound
+        return;
+    }
+    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+    setTimeout(computerMove, 500);  // Adding delay for better UX
+}
+
+function computerMove() {
+    let bestScore = -Infinity;
+    let move;
+    for (let i = 0; i < board.length; i++) {
+        if (board[i] === '') {
+            board[i] = 'O';
+            let score = minimax(board, 0, false);
+            board[i] = '';
+            if (score > bestScore) {
+                bestScore = score;
+                move = i;
+            }
+        }
+    }
+    board[move] = 'O';
+    updateBoard(move, 'O');
+    if (checkWin()) {
+        updateScore('computer');
+        playWinSound(); // Play win sound
+        return;
+    }
+    if (checkTie()) {
+        updateScore('tie');
+        playTieSound(); // Play tie sound
+        return;
+    }
+    currentPlayer = 'X';
+}
+
+function minimax(board, depth, isMaximizing) {
+    let result = checkWinner();
+    if (result !== null) {
+        return result === 'tie' ? 0 : result === 'X' ? -1 : 1;
+    }
+
+    if (isMaximizing) {
+        let bestScore = -Infinity;
+        for (let i = 0; i < board.length; i++) {
+            if (board[i] === '') {
+                board[i] = 'O';
+                let score = minimax(board, depth + 1, false);
+                board[i] = '';
+                bestScore = Math.max(score, bestScore);
+            }
+        }
+        return bestScore;
+    } else {
+        let bestScore = Infinity;
+        for (let i = 0; i < board.length; i++) {
+            if (board[i] === '') {
+                board[i] = 'X';
+                let score = minimax(board, depth + 1, true);
+                board[i] = '';
+                bestScore = Math.min(score, bestScore);
+            }
+        }
+        return bestScore;
+    }
+}
+
+function updateBoard(index, player) {
+    cells[index].textContent = player;
+    cells[index].classList.add('played', player.toLowerCase(), 'animate'); // Add 'animate' class
+    // Ensure the transition triggers smoothly
+    setTimeout(() => {
+        cells[index].classList.remove('played', player.toLowerCase(), 'animate'); // Remove 'animate' class after animation
+    }, 300); // Adjust timing to match animation duration
+}
+
+function checkWin() {
+    return winningCombinations.some(combination => {
+        return combination.every(index => {
+            return board[index] === currentPlayer;
+        });
+    });
+}
+
+function checkTie() {
+    return board.every(cell => cell !== '');
+}
+
+function checkWinner() {
+    for (let combination of winningCombinations) {
+        const [a, b, c] = combination;
+        if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+            return board[a];
+        }
+    }
+    return board.includes('') ? null : 'tie';
+}
+
+function updateScore(winner) {
+    if (winner === 'player') {
+        scores.player++;
+        playerScoreElem.textContent = scores.player;
+    } else if (winner === 'computer') {
+        scores.computer++;
+        computerScoreElem.textContent = scores.computer;
+    } else {
+        scores.tie++;
+        tieScoreElem.textContent = scores.tie;
+    }
+}
+
+function restartGame() {
+    board = ['', '', '', '', '', '', '', '', ''];
+    cells.forEach(cell => {
+        cell.textContent = '';
+        cell.classList.remove('played', 'x', 'o');
+    });
+    currentPlayer = 'X';
+}
+
+function toggleSound() {
+    isSoundOn = !isSoundOn;
+    soundBtn.textContent = `Sound: ${isSoundOn ? 'On' : 'Off'}`;
+}
+
+function playPlaceSound() {
+    if (isSoundOn) {
+        placeSound.currentTime = 0; // Reset sound to start
+        placeSound.play();
+    }
+}
+
+function playWinSound() {
+    if (isSoundOn) {
+        winSound.currentTime = 0; // Reset sound to start
+        winSound.play();
+    }
+}
+
+function playTieSound() {
+    if (isSoundOn) {
+        tieSound.currentTime = 0; // Reset sound to start
+        tieSound.play();
+    }
+}
+
+    </script>
+</body>
+</html>

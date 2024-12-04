@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBM (Contact)</title>
+    <link rel="icon" href="images/brain2.png"> 
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/tooltip.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- font-awesome link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar container-fluid" id="contact">
+        <div class="brand">
+            <div><img src="images/brain2.png" alt="logo"></div>
+            <div class="logotext"><span>Bee Bee</span> Memory</div>
+        </div>
+        <div class="navtext">
+            <ul>
+                <li><a href="index.html" id="home"><i class="fa-sharp fa-solid fa-house"></i>&nbsp;Home</a></li>
+                <li><a href="aboutgame.html"><i class="fa-solid fa-bars"></i>&nbsp;About Games</a></li>
+                <li><a href="game.html"><i class="fa-solid fa-gamepad"></i>&nbsp;Games</a></li>
+                <li><a href="Profilelud.jsp"><i class="fa-solid fa-user"></i>&nbsp;Profile</a></li>
+                <li><a href="Leaderboardud.jsp"><i class="fa-solid fa-star"></i>&nbsp;Leaderboard</a></li>
+                <li class="active1"><a href="contact.html"><i class="fa-solid fa-address-book"></i>&nbsp;Contact</a></li>
+                <!-- Down Button  -->
+                <li class="active2"><a href="#footer" data-bs-toggle="tooltip"
+                    title="Down"><i class="fa-solid fa-arrow-down"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- End of Navbar -->
+    <!-- Team  -->
+    <div class="container mt-3">
+        <div class="row">
+            <h1 class="text-center alert-danger rounded p-4">Our Team</h1>
+        </div>
+    </div>
+
+<style>
+    .contactcard .cardimage img{
+        border-radius: 50%;
+        width:60px;
+        height: 60px;
+        margin-left:10px;
+    }
+    .name{
+        margin-top:18px;
+        margin-left:-15px;
+    }
+</style>
+
+    <div class="contact container p-3 justify-content-center">
+        <!-- Eaindi Moe  -->
+        <div class="contactcard">
+            <div class="cardimage row justify-content-around mt-3">
+                <div class="col-3">
+                    <img src="images/edm.jpg" alt="">
+                </div>
+                <h5 class="name col-8">Eaindi Moe</h5>
+            </div>
+            <div class="cardt mt-3">
+                
+
+                <div class="row justify-content-evenly">
+                    <button class="btn btn-danger col-4">Leader</button>
+                    <button class="btn btn-outline-danger col-5" data-bs-target="#modal1" data-bs-toggle="modal">View Details</button>
+                    <!-- modal  -->
+                    <div class="modal fade" id="modal1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <div class="modal-header">
+                                    <img class="headimg" src="images/edm.jpg" alt="">
+                                    <h4 class=" text-dark" data-bs-toggle="tooltip" title="Member">Eaindi Moe</h4>
+                                    <button class="btn btn-close btn-danger" data-bs-dismiss="modal"></button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <!-- <div class="pfimg row ">
+                                        <img src="images/math1.jpg" alt="">
+                                    </div> -->
+                                    <div class="pftext row">
+                                        <div class="label col-4">
+                                            <div>Work Position:</div>
+                                            <div>Roll No:</div>
+                                            <div>University:</div>
+                                            <div>Academic Year:</div>
+                                            <div>Age:</div>
+                                            <div>Sex:</div>
+                                            <div>Address:</div>
+                                            <div>Contact:</div>
+                                        </div>
+                                        <div class="info col-8">
+                                            <div>Front-End Developer/ Designer</div>
+                                            <div>KPYMYK-001272</div>
+                                            <div>University of Computer Studies (Myeik)</div>
+                                            <div>B.C.Sc. Second Year</div>
+                                            <div>19</div>
+                                            <div>Male</div>
+                                            <div>Kantharyar Village, Myeik</div>
+                                            <div class="contactrow row">
+                                                <a class="btn btn-outline-danger col-2" data-bs-toggle="tooltip" title="Facebook: Eaindi Moe"><i class="fa-brands fa-facebook"></i></a>
+                                                <a class="btn btn-outline-danger col-2" data-bs-toggle="tooltip" title="Messenger: Eaindi Moe"><i class="fa-brands fa-facebook-messenger"></i></a>
+                                                <a class="btn btn-outline-danger col-2" data-bs-toggle="tooltip" title="Instagram: Eaindi Moe"><i class="fa-brands fa-instagram"></i></a>
+                                                <a class="btn btn-outline-danger col-2" data-bs-toggle="tooltip" title="Telegram: +95 9444959955"><i class="fa-brands fa-telegram"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of modal  -->
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Hein Lin Htet Zaw  -->
+        <div class="contactcard">
+            <div class="cardimage row justify-content-around mt-3">
+                <div class="col-3">
+                    <img src="images/meee.jpg" alt="">
+                </div>
+                <h5 class="name col-8">Hein Lin Htet Zaw</h5>
+            </div>
+            <div class="cardt mt-3">
+
+                <div class="row justify-content-evenly">
+                    <span class="btn btn-primary col-4">Member</span>
+                    <button class="btn btn-outline-primary col-5" data-bs-target="#modal2" data-bs-toggle="modal">View Details</button>
+                    <!-- modal  -->
+                    <div class="modal fade" id="modal2">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <div class="modal-header">
+                                    <img class="headimg" src="images/meee.jpg" alt="">
+                                    <h4 class=" text-dark" data-bs-toggle="tooltip" title="Member">Hein Lin Htet Zaw</h4>
+                                    <button class="btn btn-close btn-danger text-white" data-bs-dismiss="modal"></button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <!-- <div class="pfimg row ">
+                                        <img src="images/math1.jpg" alt="">
+                                    </div> -->
+                                    <div class="pftext row">
+                                        <div class="label col-4">
+                                            <div>Work Position:</div>
+                                            <div>Roll No:</div>
+                                            <div>University:</div>
+                                            <div>Academic Year:</div>
+                                            <div>Age:</div>
+                                            <div>Sex:</div>
+                                            <div>Address:</div>
+                                            <div>Contact:</div>
+                                        </div>
+                                        <div class="info col-8">
+                                            <div>Back-End Developer/ Data Manager</div>
+                                            <div>KPYMYK-001308</div>
+                                            <div>University of Computer Studies (Myeik)</div>
+                                            <div>B.C.Sc. Second Year</div>
+                                            <div>19</div>
+                                            <div>Male</div>
+                                            <div>Shew Doo Village, Myeik</div>
+                                            <div class="contactrow row">
+                                                <a class="btn btn-outline-primary col-2" data-bs-toggle="tooltip" title="Facebook: Hein Lin Htet Zaw"><i class="fa-brands fa-facebook"></i></a>
+                                                <a class="btn btn-outline-primary col-2" data-bs-toggle="tooltip" title="Messenger: Hein Lin Htet Zaw"><i class="fa-brands fa-facebook-messenger"></i></a>
+                                                <a class="btn btn-outline-primary col-2" data-bs-toggle="tooltip" title="Instagram: Hein Lin Htet Zaw"><i class="fa-brands fa-instagram"></i></a>
+                                                <a class="btn btn-outline-primary col-2" data-bs-toggle="tooltip" title="Telegram: +95 9441596328"><i class="fa-brands fa-telegram"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of modal  -->
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Pyae Phyo Zaw  -->
+        <div class="contactcard">
+            <div class="cardimage row justify-content-around mt-3">
+                <div class="col-3">
+                    <img src="images/ppz.jpg" alt="">
+                </div>
+                <h5 class="name col-8">Pyae Phyo Zaw</h5>
+            </div>
+            <div class="cardt mt-3">
+                
+                <div class="row justify-content-evenly">
+                    <span class="btn btn-primary col-4">Member</span>
+                    <button class="btn btn-outline-primary col-5" data-bs-target="#modal3" data-bs-toggle="modal">View Details</button>
+                    <!-- modal  -->
+                    <div class="modal fade" id="modal3">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <div class="modal-header">
+                                    <img class="headimg" src="images/ppz.jpg" alt="">
+                                    <h4 class=" text-dark" data-bs-toggle="tooltip" title="Member">Pyae Phyo Zaw</h4>
+                                    <button class="btn btn-close btn-danger text-white" data-bs-dismiss="modal"></button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <!-- <div class="pfimg row ">
+                                        <img src="images/math1.jpg" alt="">
+                                    </div> -->
+                                    <div class="pftext row">
+                                        <div class="label col-4">
+                                            <div>Work Position:</div>
+                                            <div>Roll No:</div>
+                                            <div>University:</div>
+                                            <div>Academic Year:</div>
+                                            <div>Age:</div>
+                                            <div>Sex:</div>
+                                            <div>Address:</div>
+                                            <div>Contact:</div>
+                                        </div>
+                                        <div class="info col-8">
+                                            <div>Game Manager (Specialize)</div>
+                                            <div>KPYMYK-001290</div>
+                                            <div>University of Computer Studies (Myeik)</div>
+                                            <div>B.C.Sc. Second Year</div>
+                                            <div>20</div>
+                                            <div>Male</div>
+                                            <div>Khan Phyar Quarter, Myeik</div>
+                                            <div class="contactrow row">
+                                                <a class="btn btn-outline-primary col-2" data-bs-toggle="tooltip" title="Facebook: Pyae Phyo Zaw"><i class="fa-brands fa-facebook"></i></a>
+                                                <a class="btn btn-outline-primary col-2" data-bs-toggle="tooltip" title="Messenger: Pyae Phyo Zaw"><i class="fa-brands fa-facebook-messenger"></i></a>
+                                                <a class="btn btn-outline-primary col-2" data-bs-toggle="tooltip" title="Instagram: Pyae Phyo Zaw"><i class="fa-brands fa-instagram"></i></a>
+                                                <a class="btn btn-outline-primary col-2" data-bs-toggle="tooltip" title="Telegram: +95 9684719860"><i class="fa-brands fa-telegram"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of modal  -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="contact container p-3 justify-content-center">
+        <!-- Chan Myae Thu  -->
+        <div class="contactcard">
+            <div class="cardimage row justify-content-around mt-3">
+                <div class="col-3">
+                    <img src="images/cmt1.jpg" alt="">
+                </div>
+                <h5 class="name col-8">Chan Myae Thu</h5>
+            </div>
+            <div class="cardt mt-3">
+
+                <div class="row justify-content-evenly">
+                    <span class="btn btn-primary col-4">Member</span>
+                    <button class="btn btn-outline-primary col-5" data-bs-target="#modal4" data-bs-toggle="modal">View Details</button>
+                    <!-- modal  -->
+                    <div class="modal fade" id="modal4">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <div class="modal-header">
+                                    <img class="headimg" src="images/cmt1.jpg" alt="">
+                                    <h4 class=" text-dark" data-bs-toggle="tooltip" title="Member">Chan Myae Thu</h4>
+                                    <button class="btn btn-close btn-danger text-white" data-bs-dismiss="modal"></button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <!-- <div class="pfimg row ">
+                                        <img src="images/math1.jpg" alt="">
+                                    </div> -->
+                                    <div class="pftext row">
+                                        <div class="label col-4">
+                                            <div>Work Position:</div>
+                                            <div>Roll No:</div>
+                                            <div>University:</div>
+                                            <div>Academic Year:</div>
+                                            <div>Age:</div>
+                                            <div>Sex:</div>
+                                            <div>Address:</div>
+                                            <div>Contact:</div>
+                                        </div>
+                                        <div class="info col-8">
+                                            <div>Game Manager/ Informer</div>
+                                            <div>KPYMYK-001295</div>
+                                            <div>University of Computer Studies (Myeik)</div>
+                                            <div>B.C.Sc. Second Year</div>
+                                            <div>19</div>
+                                            <div>Female</div>
+                                            <div>Kantharyar Village, Myeik</div>
+                                            <div class="contactrow row">
+                                                <a class="btn btn-outline-primary col-2" data-bs-toggle="tooltip" title="Facebook: Chan Myae Thu"><i class="fa-brands fa-facebook"></i></a>
+                                                <a class="btn btn-outline-primary col-2" data-bs-toggle="tooltip" title="Messenger: Chan Myae Thu"><i class="fa-brands fa-facebook-messenger"></i></a>
+                                                <a class="btn btn-outline-primary col-2" data-bs-toggle="tooltip" title="Instagram: Chan Myae Thu"><i class="fa-brands fa-instagram"></i></a>
+                                                <a class="btn btn-outline-primary col-2" data-bs-toggle="tooltip" title="Telegram: Chan"><i class="fa-brands fa-telegram"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of modal  -->
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Hanni Saung  -->
+        <div class="contactcard">
+            <div class="cardimage row justify-content-around mt-3">
+                <div class="col-3">
+                    <img src="images/hns.jpg" alt="">
+                </div>
+                <h5 class="name col-8">Hanni Saung</h5>
+            </div>
+            <div class="cardt mt-3">
+
+                <div class="row justify-content-evenly">
+                    <span class="btn btn-primary col-4">Member</span>
+                    <button class="btn btn-outline-primary col-5" data-bs-target="#modal5" data-bs-toggle="modal">View Details</button>
+                    <!-- modal  -->
+                    <div class="modal fade" id="modal5">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <div class="modal-header">
+                                    <img class="headimg" src="images/hns.jpg" alt="">
+                                    <h4 class=" text-dark" data-bs-toggle="tooltip" title="Member">Hanni Saung</h4>
+                                    <button class="btn btn-close btn-danger text-white" data-bs-dismiss="modal"></button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <!-- <div class="pfimg row ">
+                                        <img src="images/math1.jpg" alt="">
+                                    </div> -->
+                                    <div class="pftext row">
+                                        <div class="label col-4">
+                                            <div>Work Position:</div>
+                                            <div>Roll No:</div>
+                                            <div>University:</div>
+                                            <div>Academic Year:</div>
+                                            <div>Age:</div>
+                                            <div>Sex:</div>
+                                            <div>Address:</div>
+                                            <div>Contact:</div>
+                                        </div>
+                                        <div class="info col-8">
+                                            <div>Back-End Developer/ Informer</div>
+                                            <div>KPYMYK-001336</div>
+                                            <div>University of Computer Studies (Myeik)</div>
+                                            <div>B.C.Sc. Second Year</div>
+                                            <div>19</div>
+                                            <div>Female</div>
+                                            <div>Shan Chaung Street, Myeik</div>
+                                            <div class="contactrow row">
+                                                <a class="btn btn-outline-primary col-2" data-bs-toggle="tooltip" title="Facebook: Hanni Saung"><i class="fa-brands fa-facebook"></i></a>
+                                                <a class="btn btn-outline-primary col-2" data-bs-toggle="tooltip" title="Messenger: Hanni Saung"><i class="fa-brands fa-facebook-messenger"></i></a>
+                                                <a class="btn btn-outline-primary col-2" data-bs-toggle="tooltip" title="Instagram: Hanni Saung"><i class="fa-brands fa-instagram"></i></a>
+                                                <a class="btn btn-outline-primary col-2" data-bs-toggle="tooltip" title="Telegram: +95 9888149199"><i class="fa-brands fa-telegram"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of modal  -->
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Theingi Phyo  -->
+        <div class="contactcard">
+            <div class="cardimage row justify-content-around mt-3">
+                <div class="col-3">
+                    <img src="images/tp.jpg" alt="">
+                </div>
+                <h5 class="name col-8">Theingi Phyo</h5>
+            </div>
+            <div class="cardt mt-3">
+
+                <div class="row justify-content-evenly">
+                    <span class="btn btn-primary col-4">Member</span>
+                    <button class="btn btn-outline-primary col-5" data-bs-target="#modal6" data-bs-toggle="modal">View Details</button>
+                    <!-- modal  -->
+                    <div class="modal fade" id="modal6">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <div class="modal-header">
+                                    <img class="headimg" src="images/tp.jpg" alt="">
+                                    <h4 class="text-dark" data-bs-toggle="tooltip" title="Member">Theingi Phyo</h4>
+                                    <button class="btn btn-close btn-danger text-white" data-bs-dismiss="modal"></button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <!-- <div class="pfimg row ">
+                                        <img src="images/math1.jpg" alt="">
+                                    </div> -->
+                                    <div class="pftext row">
+                                        <div class="label col-4">
+                                            <div>Work Position:</div>
+                                            <div>Roll No:</div>
+                                            <div>University:</div>
+                                            <div>Academic Year:</div>
+                                            <div>Age:</div>
+                                            <div>Sex:</div>
+                                            <div>Address:</div>
+                                            <div>Contact:</div>
+                                        </div>
+                                        <div class="info col-8">
+                                            <div>Front-End Developer/ Informer</div>
+                                            <div>KPYMYK-001280</div>
+                                            <div>University of Computer Studies (Myeik)</div>
+                                            <div>B.C.Sc. Second Year</div>
+                                            <div>20</div>
+                                            <div>Female</div>
+                                            <div>Shwe Pyi Tan, Myeik</div>
+                                            <div class="contactrow row">
+                                                <a class="btn btn-outline-primary col-2" data-bs-toggle="tooltip" title="Facebook: Theingi Phyo"><i class="fa-brands fa-facebook"></i></a>
+                                                <a class="btn btn-outline-primary col-2" data-bs-toggle="tooltip" title="Messenger: Theingi Phyo"><i class="fa-brands fa-facebook-messenger"></i></a>
+                                                <a class="btn btn-outline-primary col-2" data-bs-toggle="tooltip" title="Instagram: Theingi Phyo"><i class="fa-brands fa-instagram"></i></a>
+                                                <a class="btn btn-outline-primary col-2" data-bs-toggle="tooltip" title="Telegram: Theingi Phyo"><i class="fa-brands fa-telegram"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of modal  -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- End of Team  -->
+
+
+    <!-- Contact us -->
+    <!-- Contact header  -->
+    <div class="container mt-2" id="guestcontact">
+        <div class="row ">
+         <h1 class="text-center text-white bg-secondary p-4 rounded">Contact Us</h1>
+        </div>
+     </div>
+     <!-- End of Contact header  -->
+     <!-- Contact Address  -->
+     <div class="guestcontact container">
+         <div class="address">
+             <div class="addressrow row col-8 mt-4">
+                 <div class="contacticon col-1">
+                     <button class="location btn btn-outline-danger btn-lg mt-1"><i class="fa-solid fa-location-dot"></i></button>
+                 </div>
+                 <div class="contacttext col-10">
+                     <h4>Address</h4>
+                     <div class="addresstext">Kyawt Phyu Taung Road, University of Computer Studies (Myeik)</div>
+                 </div>
+             </div>
+             <div class="addressrow row col-8 mt-4">
+                 <div class="contacticon col-1">
+                     <button class="btn btn-outline-danger btn-lg mt-1"><i class="fa-solid fa-envelope"></i></button>
+                 </div>
+                 <div class="contacttext col-10">
+                     <h4>Mail</h4>
+                     <div class="addresstext">mmgeaindimoe@gmail.com</div>
+                 </div>
+             </div>
+             <div class="addressrow row col-8 mt-4">
+                 <div class="contacticon col-1">
+                     <button class="btn btn-outline-danger btn-lg mt-1"><i class="fa-solid fa-phone"></i></button>
+                 </div>
+                 <div class="contacttext col-10">
+                     <h4>Phone</h4>
+                     <div class="addresstext">+95 9764632605/ +95 9670746930</div>
+                 </div>
+             </div>
+             <div class="addressrow row col-8 mt-4">
+                 <div class="contacticon col-1">
+                     <button class="btn btn-outline-danger btn-lg mt-1"><i class="fa-solid fa-clock"></i></button>
+                 </div>
+                 <div class="contacttext col-10">
+                     <h4>Time</h4>
+                     <div class="addresstext">Mon to Fri: 8:00AM to 5:00PM</div>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <div class="contactimage">
+         <img src="images/brain2.png" alt="">
+     </div>
+     <!-- End of Contact Address  -->
+     <!-- End of Contact us  -->
+    
+    <!-- Up Button -->
+    <div class="up">
+        <a href="#contact" class="btn btn-danger" 
+        data-bs-toggle="tooltip" title="Up"><i class="fa-solid fa-arrow-up"></i></a> 
+    </div>
+    <!-- End of Up Button  -->
+
+    <!-- Footer -->
+    <div class="container-fluid bg-dark" id="footer">
+        <div class="footerlogo row">
+            <h2 class="col-4" data-bs-toggle="tooltip" title="Our Website"><img src="images/brain2.png" alt="" width="50px">Bee Bee Memory</h2>
+        </div>
+        <div class="row bg-dark text-white justify-content-between p-4">
+            <div class="r1 col-3 row">
+                <h3>Contact Us</h3>
+                <ul class="col-6">
+                    
+                    <li><a class="btn btn-outline-danger" href="index.html#index" data-bs-toggle="tooltip" title="Facebook: Bee Bee Memory"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a class="btn btn-outline-danger" href="aboutgame.html#aboutgame" data-bs-toggle="tooltip" title="Messenger: Bee Bee Memory"><i class="fa-brands fa-facebook-messenger"></i></a></li>
+                    <li><a class="btn btn-outline-danger" href="game.html#game" data-bs-toggle="tooltip" title="Instagram: Bee Bee Memory"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a class="btn btn-outline-danger" href="profile.html#profile" data-bs-toggle="tooltip" title="Telegram: Bee Bee Memory"><i class="fa-brands fa-telegram"></i></a></li>
+                    
+                </ul>
+                
+            </div>
+            <div class="r2 col-3">
+                <ul>
+                    <h3>Website Links</h3>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutgame.html">About Games</a></li>
+                    <li><a href="game.html#game">Games</a></li>
+                    <li><a href="Profilelud.jsp">Profile</a></li>
+                    <li><a href="Leaderboardud.jsp">Leaderboard</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="r3 col-3">    
+                <ul>
+                    <h3>Game Links</h3>
+                    <li><a href="mathpf.html#mathpf" data-bs-toggle="tooltip" title="kids level">Math Game</a></li>
+                    <li><a href="color cardpf.html#colorcardpf" data-bs-toggle="tooltip" title="kids level">Color Card Game</a></li>
+                    <li><a href="fruitcardkidspf.html#fruitcardkidspf" data-bs-toggle="tooltip" title="kids level">Fruit Card Game</a></li>
+                    <li><a href="guesswordkidspf.html#guesswordkidspf" data-bs-toggle="tooltip" title="kids level">Guess Word Game</a></li>
+                    <li><a href="wordscramblekidspf.html#wordscramblekidspf" data-bs-toggle="tooltip" title="kids level">Word Scramble Game</a></li>
+                    <li><a href="multiplyingpf.html#multiplyingpf" data-bs-toggle="tooltip" title="Toddlers level">Multiplying Game</a></li>
+                    <li><a href="cardpf.html#cardpf" data-bs-toggle="tooltip" title="Toddlers level">Card Game</a></li>
+                    <li><a href="guesswordtoddlerspf.html#guesswordtoddlerspf" data-bs-toggle="tooltip" title="Toddlers level">Guess Word Game</a></li>
+                </ul>
+            </div>
+            <div class="r4 col-3">    
+                <ul>
+                    <h3>Game Links</h3>
+                    
+                    <li><a href="wordscrambletoddlerspf.html#wordscrambletoddlerspf" data-bs-toggle="tooltip" title="Toddlers level">Word Scramble Game</a></li>
+                    <li><a href="numberpf.html#numberpf" data-bs-toggle="tooltip" title="Teenagers level">Number Game</a></li>
+                    <li><a href="brainpf.html#brainpf" data-bs-toggle="tooltip" title="Teenagers level">Brain Game</a></li>
+                    <li><a href="guesswordteenagerspf.html#guesswordteenagerspf" data-bs-toggle="tooltip" title="Teenagers level">Guess Word Game</a></li>
+                    <li><a href="wordscrambleteenagerspf.html#wordscrambleteenagerspf" data-bs-toggle="tooltip" title="Teenagers level">Word Scramble Game</a></li>
+                    <li><a href="2playerscardpf.html#2playerscardpf" data-bs-toggle="tooltip" title="2 Players Type">Card Game</a></li>
+                    <li><a href="2playerstic ta toepf.html#2playerstictatoepf" data-bs-toggle="tooltip" title="2 Players Type">Tic Ta Toe Game</a></li>
+                    <li><a href="2playerscheckerboardpf.html#2playerscheckerboardpf" data-bs-toggle="tooltip" title="2 Players Type">Checkarboard Game</a></li>
+                </ul>
+            </div>
+
+        </div>
+        
+    </div>
+    <div class="container-fluid bg-danger">
+        <div class="footertext column p-2 text-white text-center">
+            <h5 >&copy; copyright! all right reserved</h5>
+            <h6 >Designed By Bee Bee Memory</h6>
+        </div>
+    </div>
+    <!-- End of Footer -->
+</body>
+</html>

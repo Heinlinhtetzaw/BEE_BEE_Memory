@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone-Paper-Scissor Game</title>
+    <link rel="icon" href="images/sps.jpg">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/tooltip.js"></script>
+    <!-- Bootstrap Link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- End of Bootstrap link  -->
+    <!-- font-awesome link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar container-fluid" id="guest">
+        <div class="brand">
+            <div><img src="images/brain2.png" alt="logo"></div>
+            <div class="logotext"><span>Bee Bee</span> Memory</div>
+        </div>
+        <div class="navtext">
+            <ul>
+                <li><a href="guest.html" id="home"><i class="fa-sharp fa-solid fa-house"></i>&nbsp;Home</a></li>
+                <li><a href="guest.html#guestaboutgame"><i class="fa-solid fa-bars"></i>&nbsp;About Games</a></li>
+                <li class="active1"><a href="#guestgame"><i class="fa-solid fa-gamepad"></i>&nbsp;Games</a></li>
+                <li><a class="notallowed" href="#" data-bs-toggle="tooltip" title="You need to login first !"><i class="fa-solid fa-user"></i>&nbsp;Profile</a></li>
+                <li><a class="notallowed" href="#" data-bs-toggle="tooltip" title="You need to login first !"><i class="fa-solid fa-star"></i>&nbsp;Leaderboard</a></li>
+                <li><a href="guest.html#guestcontact"><i class="fa-solid fa-address-book"></i>&nbsp;Contact</a></li>
+                <!-- Down Button  -->
+                <li class="active2"><a href="#">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- End of Navbar -->
+
+    <!-- Image Carousel -->
+    <div class="imagecarousel container-fluid p-4">
+        <div class="row justify-content-center">
+            <div class="carousel slide col-8 " data-bs-ride="carousel" id="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" ></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" ></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" ></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="4" ></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="5" ></button>
+                </div>
+    
+                <div class="carousel-inner">
+                    <!-- Visual Memory Test Game  -->
+                    <div class="carousel-item active">
+                        <img src="images/visual1.png" height="400px" alt="home" class="d-block rounded" data-bs-toggle="tooltip" title="Visual Memory Test Game" style="width:100%">
+                        <div class="carousel-caption">
+                            <a href="visualmemorytestpf.html#visualmemorytestpf" class="btn btn-primary col-4 p-2">Play</a>
+                          </div>
+                    </div>
+
+                    <!-- Guess Number Game-->
+                    <div class="carousel-item">
+                        <img src="images/guessnumberimg.jpg" height="400px" alt="home" class="d-block rounded" data-bs-toggle="tooltip" title="Guess Number Game" style="width:100%">
+                        <div class="carousel-caption">
+                            <a href="guessnumberpf.html#guestnumberpf" class="btn btn-primary col-4 p-2">Play</a>
+                          </div>
+                    </div>
+                    
+                    <!-- Puzzle Game  -->
+                    <div class="carousel-item">
+                        <img src="images/numpuzzle.png" height="400px" alt="home" class="d-block rounded" data-bs-toggle="tooltip" title="Puzzle Game"  style="width:100%">
+                        <div class="carousel-caption">
+                            <a href="puzzlepf.html#puzzlepf" class="btn btn-primary col-4 p-2">Play</a>
+                          </div>
+                    </div>
+                    <!-- Guest Tic Ta Toe Game  -->
+                    <div class="carousel-item">
+                        <img src="images/2playertictatoe1.png" height="400px" alt="home" class="d-block rounded" data-bs-toggle="tooltip" title="Guest Tic Ta Toe Game" style="width:100%">
+                        <div class="carousel-caption">
+                            <a href="2playerstic ta toepf.html#2playerstictatoepf" class="btn btn-primary col-4 p-2">Play</a>
+                          </div>
+                    </div>
+                    <!-- Typing Game  -->
+                    <div class="carousel-item">
+                        <img src="images/typing.jpg" height="400px" alt="home" class="d-block rounded" data-bs-toggle="tooltip" title="Typing Game" style="width:100%">
+                        <div class="carousel-caption">
+                            <a href="typingpf.html#typingpf" class="btn btn-primary col-4 p-2">Play</a>
+                          </div>
+                    </div>
+
+                    <!-- Stone-Paper-Scissor Game  -->
+                    <div class="carousel-item">
+                        <img src="images/sps.jpg" height="400px" alt="home" class="d-block rounded" data-bs-toggle="tooltip" title="Stone-Paper-Scissor Game" style="width:100%">
+                        <div class="carousel-caption">
+                            <a href="stonepaperscissorpf.html#stonepaperscissorpf" class="btn btn-primary col-4 p-2">Play</a>
+                          </div>
+                    </div>
+                    
+                </div>
+    
+                <button type="button" class="carousel-control-prev" data-bs-target="#carousel" data-bs-slide="prev">
+                    <i class="leftandright fa-solid fa-arrow-left"></i></a>
+                </button>
+                <button type="button" class="carousel-control-next" data-bs-target="#carousel" data-bs-slide="next">
+                   <i class="leftandright fa-solid fa-arrow-right"></i></a>
+                </button>
+                <style>
+                    .leftandright{
+                        background-color:rgb(27, 26, 26);
+                        border-radius: 10px;
+                        padding:10px 20px;
+                    }
+                </style>
+            </div>
+        </div>
+    </div>
+    <!-- End of Image Carousel  -->
+
+
+    <!-- Stone-Paper-Scissor Game  -->
+    <div class="gamebox">
+        <div class="wordscramblekidspf gameprofile container bg-secondary text-light p-3 mt-4" id="stonepaperscissorpf">
+            <div class="row justify-content-evenly p-3">
+                <div class="image col-5">
+                    <img src="images/sps.jpg" alt="" class="rounded">
+                </div>
+                
+                <div class="gameinfo col-5 pt-4">
+                    <!-- Game Name  -->
+                    <h2 class="justify-content-center">Stone-Paper-Scissor Game </h2>
+                    <!-- Age Level  -->
+                    <h2>Recommend For Guest Players</h2>
+                    <!-- About Game card  -->
+                    <div class="card bg-info text-light">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h2>How to play?</h2>
+                            </div>
+                            <div class="card-text text-justify">
+                                <div>
+                                    Stone paper scissors game featuring a scoreboard and two game modes: for one player, in which the player faces the computer, and also for two players, who face each other in an exciting online match.                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Play Button  -->
+                    <div class="playbutton">
+                        <div class="button mt-3 ">
+                            <div class="row">
+                                <a href="stonepaperscissor.html#stonepaperscissorpf" class="exitandplay btn btn-outline-info col-4 p-3 text-light" 
+                                data-bs-toggle="modal" data-bs-target="#modal">Exit</a>
+                                <!-- modal -->
+                                <div class="modal fade" data-bs-backdrop="static" id="modal">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <img src="images/brain1.png" alt="" width="50px">
+                                                <div class="text-danger">Bee Bee Memory</div>
+                                                <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h2 class="text-dark text-center">Do you want to exit?</h2>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <a href="#" class="modalbutton btn btn-outline-danger" 
+                                                data-bs-dismiss="modal">Cancel</a>
+                                                <a href="guest.html#gamebutton" class="modalbutton btn btn-danger">Exit</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end of modal -->
+                                <a href="./Guest5game/stone.html" class="exitandplay btn btn-info col-4 p-3 text-light">Play Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Previous and Next Button  -->
+    <div class="container mt-2">
+        <div class="row justify-content-start">
+            <a href="typingpf.html#typingpf" class="btn btn-danger col-1 text-white p-2" data-bs-toggle="tooltip" title="Typing Game"><i class="fa-solid fa-arrow-left"></i> Prev</a>
+        </div>
+    </div>
+    <!-- End of Previous and Next Button  -->
+    <!-- Footer -->
+    <div class="container-fluid bg-dark mt-3" id="footer">
+        <div class="footerlogo row">
+            <h2 class="col-4" data-bs-toggle="tooltip" title="Our Website"><img src="images/brain2.png" alt="" width="50px">Bee Bee Memory</h2>
+        </div>
+        <div class="row bg-dark text-white justify-content-evenly p-4">
+            <div class="r2 col-3">
+                <img src="images/brain2.png" alt="" class="col-10">
+            </div>
+            <div class="r1 col-3 row">
+                <h3>Contact Us</h3>
+                <ul class="col-12">
+                    
+                    <li><a class="btn btn-outline-danger" href="index.html#index" data-bs-toggle="tooltip" title="Facebook: Bee Bee Memory"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a class="btn btn-outline-danger" href="aboutgame.html#aboutgame" data-bs-toggle="tooltip" title="Messenger: Bee Bee Memory"><i class="fa-brands fa-facebook-messenger"></i></a></li>
+                    <li><a class="btn btn-outline-danger" href="game.html#game" data-bs-toggle="tooltip" title="Instagram: Bee Bee Memory"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a class="btn btn-outline-danger" href="profile.html#profile" data-bs-toggle="tooltip" title="Telegram: Bee Bee Memory"><i class="fa-brands fa-telegram"></i></a></li>
+                    
+                </ul>
+                
+            </div>
+            <div class="r2 col-3">
+                <ul>
+                    <h3>Website Links</h3>
+                    <li><a href="guest.html#guest">Home</a></li>
+                    <li><a href="guest.html#guestaboutgame">About Games</a></li>
+                    <li><a href="guest.html#guestgame">Games</a></li>
+                    <li><a href="guest.html#guestcontact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="r3 col-3">    
+                <ul>
+                    <h3>Game Links</h3>
+                    <li><a href="visualmemorytestpf.html#visualmemorytestpf">Visual Memory Test Game</a></li>
+                    <li><a href="guessnumberpf.html#guessnumberpf">Guess Number Game</a></li>
+                    <li><a href="puzzlepf.html#puzzlepf">Puzzle Game</a></li>
+                    <li><a href="guesttictatoepf.html#guesttictatoepf">Tic Ta Toe Game</a></li>
+                    <li><a href="typingpf.html#typingpf">Typing Game</a></li>
+                    <li><a href="stonepaperscissorpf.html#stonepaperscissorpf">Stone-Paper-Scissor</a></li>
+                </ul>
+            </div>
+
+        </div>
+        
+    </div>
+    <div class="container-fluid bg-danger">
+        <div class="footertext column p-2 text-white text-center">
+            <h5 >&copy; copyright! all right reserved</h5>
+            <h6 >Designed By Bee Bee Memory</h6>
+        </div>
+    </div>
+    <!-- End of Footer -->
+</body>
+</html>

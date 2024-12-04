@@ -1,0 +1,446 @@
+::-webkit-scrollbar{
+    display:none;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --nav-btn-color:red;
+    --background-color-1: #fff;
+    --background-color-2:#f4f7fc;
+    --background-color-3:#e4edfd;
+    --background-color-4:#cfe0ff;
+    --guest-background-color:#ff4747;
+    --linear-gradient-1:linear-gradient(-45deg,#d9e4f9,#77a2f3);
+    --linear-gradient-2:linear-gradient(45deg,#d9e4f9,#77a2f3);
+    --logotext-color:rgb(249, 18, 91);
+}
+
+.container{
+    border-radius: 10px;
+}
+/* Navbar  */
+.navbar img{
+    width:100px;
+    
+}
+.navbar{
+    margin-top:-10px;
+    background-color: #fff; 
+    box-shadow: 0px 5px 10px #f6f4f4;
+    border-radius:15px;
+}
+.navbar .brand{
+    display:flex;
+}
+.navbar .brand .logotext{
+    font-size:1.7em;
+    padding-top:35px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-style:italic;
+}
+.navbar .brand .logotext span{
+    color:var(--logotext-color);
+    font-weight: 700;
+    /* font-size:1.5em; */
+    font-family:Arial, Helvetica, sans-serif;
+}
+/* .navbar .row .navbar{
+    float:right;
+} */
+.navbar .navtext ul{
+    margin-right:20px;
+    list-style-type: none;
+    padding-top:40px;
+    float:right;
+    font-size: 1.1em;
+}
+.navbar .navtext ul li{
+    display:inline;
+    padding-right:5px;
+}
+.navbar .navtext ul li a{
+    position:relative;
+    text-decoration:none;
+    color:#000000;
+    padding:10px 15px;
+    
+}
+/* For Guest page navbar */
+.navbar .navtext ul li .notallowed{
+    cursor:not-allowed;
+}
+/* end of For Guest page navbar */
+.navbar .navtext ul li a:hover{
+    color:var(--nav-btn-color);
+    border:none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px #d6d3d3;
+    transition:0.2s;
+    
+}
+.navbar .navtext ul li.active1 a{
+    color:var(--nav-btn-color);
+    border:none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px #b1afaf;
+}
+.navbar .navtext ul li.active2 a{
+    color:#fff;
+    background-color: red;
+    border:none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px #b1afaf;
+}
+.navbar .navtext ul li .btn{
+    padding:8px 25px;
+    color:#fff;
+    background-color: var(--nav-btn-color);
+    font-family:Arial, Helvetica, sans-serif;
+}
+.navbar .navtext ul li .btn:hover{
+    color:#fff;
+}
+/* End of Navbar */
+
+/* Body text  */
+
+.container .row .text{
+    margin-top:100px;
+   
+}
+.container .row .text h2{
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top:10px;
+    font-weight: 500;
+}
+.container .row .text h2 span{
+    color:var(--logotext-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+.container .row .text h2 img{
+    width:70px;
+}
+.container .row .text h2 a{
+    padding:10px 20px;
+    margin-top:20px;
+    margin-right:20px;
+
+}
+.container .row .image img{
+    margin-top:30px;
+    width:400px;
+    height:400px;
+}
+/* End of body text */
+
+.imgorder{
+    background-color: var(--background-color-2);
+    margin-top:-30px;
+}
+.imgorder .row img{
+    width:200px;
+}
+/* For Game Container */
+/* For Choose Age Kids Level  */
+.kidslevel{
+    margin-top:-40px;
+    background-color: var(--background-color-2);
+}
+.toddlerslevel{
+    margin-top:30px;
+    background-color: var(--background-color-2);
+}
+.teenagerslevel{
+    margin-top:30px;
+    background-color: var(--background-color-2);
+}
+.twoplayerstype{
+    margin-top:30px;
+    background-color: var(--background-color-2);
+}
+
+
+/* For Game Button  */
+.gamebutton {
+
+}
+.gamebutton ul{
+    margin-top:20px;
+}
+.gamebutton ul li{
+    display:inline;
+    padding:0 10px;
+}
+.gamebutton ul li a{
+    text-decoration: none;
+    border:none;
+    border-radius: 10px;
+    box-shadow:0 0 8px grey;
+    color:black;
+}
+.gamebutton ul li a:hover{
+    background-color: rgb(236, 94, 94);
+    color:#fff;
+    transition: 0.5s;
+    box-shadow: none;
+}
+/* End of Game Button  */
+/* Gamebox-container  */
+.gamebox-container{
+    display:flex;
+    overflow-x:auto;
+}
+.gamebox-container .gamebox{
+    flex:none;
+    margin-right:20px;
+}
+/* End of Gamebox-container  */
+/* About Game */
+
+
+.accordion .row .accordion-item .accordion-body{
+    font-size: 1.25em;
+    font-style: italic;
+}
+/* Games */
+.choosegamepf{
+    border-radius: 20px;
+}
+/* .kids{
+    background-color: var(--background-color-3);
+} */
+/* .kids .row .card .card-body .row img{
+    border:1px solid grey;
+    border-radius:10px;
+} */
+.dropdown ul li a{
+    text-decoration: none;
+    color:black;
+}
+/* For Kids Level */
+.kids .row .card .card-body .card-title{
+    font-size: 1.5em;
+}
+.kids .row .card{
+    background-color: var(--background-color-3);
+}
+/* For Toddlers Level */
+.toddlers .row .card .card-body .card-title{
+    font-size: 1.5em;
+}
+.toddlers .row .card{
+    background-color: var(--background-color-3);
+}
+/* For Teenagers Level */
+.teenagers .row .card .card-body .card-title{
+    font-size: 1.5em;
+}
+.teenagers .row .card{
+    background-color: var(--background-color-3);
+}
+/* For Background Color */
+.kids{
+    background-color: var(--background-color-1);
+}
+.toddlers{
+    background-color: var(--background-color-2);
+}
+.teenagers1{
+    background-color: var(--background-color-1);
+}
+.teenagers2{
+    background-color: var(--background-color-2);
+}
+/* For Button and About text*/
+.container-fluid .modal-footer .btn{
+    padding:10px 40px;
+}
+.container-fluid .modal-body .abouttext{
+    text-align: justify;
+    font-style: italic;
+}
+/* Up Button */
+.up .btn{
+    padding:10px 20px;
+    margin:20px 10px;
+}
+
+/* For Footer */
+/* .container-fluid .row .r1 .image{
+    width:200px;
+    margin-left:40px;
+} */
+.container-fluid .footerlogo{
+    color:var(--logotext-color);
+    margin-left:12px;
+    font-style: italic;
+}
+
+.container-fluid .row .r1 ul{
+    list-style-type: none;
+    margin-left:-10px;
+}
+.container-fluid .row .r1 ul li{
+    margin-left:40px;
+}
+.container-fluid .row .r1 ul li a{
+    text-decoration:none;
+    color:#fff;
+    margin-top:5px;
+    padding:10px 15px;
+    border-radius: 5px;
+    cursor:auto;
+}
+.container-fluid .row .r1 img{
+    margin-top: 100px;
+}
+/* .container-fluid .row .r1 ul li a:hover{
+    color:var(--nav-btn-color);
+} */
+.container-fluid .row .r2 ul{
+    list-style-type: none;
+}
+.container-fluid .row .r2 ul li a{
+    text-decoration:none;
+    color:#fff;
+}
+.container-fluid .row .r2 ul li a:hover{
+    color:var(--nav-btn-color);
+}
+.container-fluid .row .r3 ul{
+    list-style-type: none;
+}
+.container-fluid .row .r3 ul li a{
+    text-decoration: none;
+    color:#fff;
+}
+.container-fluid .row .r3 ul li a:hover{
+    color:var(--nav-btn-color);
+}
+.container-fluid .row .r4 ul{
+    list-style-type: none;
+}
+.container-fluid .row .r4 ul li a{
+    text-decoration: none;
+    color:#fff;
+}
+.container-fluid .row .r4 ul li a:hover{
+    color:var(--nav-btn-color);
+}
+
+/* For Contact Page  */
+.contact{
+    display:flex;
+    overflow-x:auto;
+}
+.contactcard{
+    margin-right:25px;
+    flex:none;
+    width:320px;
+    height:150px;
+    border:none;
+    box-shadow: 0 0 5px grey;
+    border-radius: 10px;
+    
+}
+
+.contactcard .cardt h3{
+    margin-left:15px;
+}
+.contact .contactcard .modal .modal-header img{
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+}
+.contact .contactcard .modal .modal-header h4{
+    margin-top:10px;
+    margin-left:10px;
+}
+.contact .contactcard .modal .modal-body .pftext .label div{
+    margin-top:10px;
+}
+.contact .contactcard .modal .modal-body .pftext .info div{
+    margin-top:10px;
+}
+.contact .contactcard .modal .modal-body .pftext .info .contactrow a{
+    margin-right:10px;
+}
+/* .cardt .btn{
+    margin-right:10px;
+} */
+
+/* Guest Page  */
+/* For guest page  */
+.guestaboutgame .guestcard .card-title img{
+    width:100%;
+    height: 150px;
+}
+.guestbodytext{
+    border:none;
+    box-shadow: 0 0 10px rgb(233, 226, 226);
+    padding:90px 0;
+    margin-top:30px;
+    border-radius: 20px;
+    background: linear-gradient(rgba(255, 0, 0, 0.81),pink);
+    color:#ffffff;
+    
+}
+.guestbodytext .button .btn{
+    background-color:red;
+    color:#fff;
+    padding:15px 30px;
+    border-radius: 30px;
+}
+.guestbodytext .button .btn:hover{
+    box-shadow: 0 0 15px #fff;
+}
+
+.guestaboutgame .guestcard{
+    border:none;
+    border-radius:10px;
+    box-shadow:0 0 5px rgb(183, 178, 178);
+    background-color: rgb(255, 226, 231);
+}
+
+
+.guestcontact .address{
+    margin-left:20px;
+}
+.guestcontact .addressrow .location{
+    padding:8px 19px;
+}
+.guestcontact .addressrow .contacttext{
+    margin-left:10px;
+}
+.guestcontact .addressrow .contacttext .addresstext{
+    margin-top:-5px;
+}
+.contactimage img{
+    width:400px;
+    float:right;
+    margin-top:-350px;
+    margin-right:120px;
+}
+/* End of guest page  */
+
+/* Game pf  */
+/* For Game Profile */
+.imagecarousel{
+    background-color: var(--background-color-2);
+}
+.gameprofile .button .row a{
+    margin-left:15px;
+}
+.playbutton .button .row .exitandplay{
+    margin-right:20px;
+} 
+/* End of Game Profile  */

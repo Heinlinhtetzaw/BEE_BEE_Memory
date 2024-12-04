@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Tic Tac Toe</title>
+    <style>
+        body{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height: 100vh;
+    background-color:#7CC0CF;
+    font-family:Arial,sans-serif;
+    margin:0;
+
+}
+.container{
+    text-align:center;
+    position:relative;
+
+}
+.board{
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    grid-gap:10px;
+    margin:20px auto;
+    position: relative;
+
+}
+.cell{
+    width:100px;
+    height:100px;
+    background-color: #fff;
+    border:1px solid#ccc;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:2rem;
+    cursor:pointer;
+
+
+}
+.cell.x{
+    color: #000;
+}
+.cell.o{
+    color:#000;
+}
+button{
+    padding:10px 20px;
+    font-size:1rem;
+    cursor:pointer;
+    background-color: rgb(136,0,255);
+    border-radius:5px;
+    border:none;
+}
+button:hover{
+    background-color:rgb(75,2,138);
+
+}
+#status{
+    margin-top:20px;
+    font-size:1.2rem;
+}
+#winningLine{
+    position:absolute;
+    top:78px;
+    left:0;
+    pointer-events: none;
+}
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Tic Ta Toe</h1>
+        <div id="board" class="board"></div>
+        <button id="reset">Reset Game</button>
+        <div id="status"></div>
+        <canvas id="winningLine"></canvas>
+    </div>
+ <script>const board = document.getElementById("board");
+    const resetButton = document.getElementById("reset");
+    const statusDisplay = document.getElementById("status");
+    const winningLine = document.getElementById("winningLine");
+    let cells;
+    let currentPlayer;
+    let gameActive;
+    let gameState;
+    
+    const winningConditions = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6],
+    ];
+    
+    function initializeGame() {
+        board.innerHTML = "";
+        currentPlayer = "x";
+        gameActive = true;
+        gameState = Array(9).fill(null);
+        statusDisplay.textContent = `Player ${currentPlayer.toUpperCase()}'s turn`;
+    
+        for (let i = 0; i < 9; i++) {
+            const cell = document.createElement("div");
+            cell.classList.add("cell");
+            cell.dataset.index = i;
+            cell.addEventListener("click", handleCellClick);
+            board.appendChild(cell);
+        }
+        
+        cells = document.querySelectorAll(".cell");
+        winningLine.width = board.offsetWidth;
+        winningLine.height = board.offsetHeight;
+        const ctx = winningLine.getContext("2d");
+        ctx.clearRect(0, 0, winningLine.width, winningLine.height);
+    }
+    
+    function handleCellClick(event) {
+        const clickedCell = event.target;
+        const clickedCellIndex = parseInt(clickedCell.dataset.index);
+        
+        if (gameState[clickedCellIndex] !== null || !gameActive) {
+            return;
+        }
+    
+        gameState[clickedCellIndex] = currentPlayer;
+        clickedCell.classList.add(currentPlayer);
+        clickedCell.textContent = currentPlayer.toUpperCase();
+        
+        checkResult();
+        
+        if (gameActive) {
+            currentPlayer = currentPlayer === "x" ? "o" : "x";
+            statusDisplay.textContent = `Player ${currentPlayer.toUpperCase()}'s turn`;
+        }
+    }
+    
+    function checkResult() {
+        let roundWon = false;
+        
+        for (let i = 0; i < winningConditions.length; i++) {
+            const [a, b, c] = winningConditions[i];
+            
+            if (gameState[a] && gameState[a] === gameState[b] && gameState[a] === gameState[c]) {
+                roundWon = true;
+                drawWinningLine(a, c);
+                break;
+            }
+        }
+    
+        if (roundWon) {
+            statusDisplay.textContent = `Player ${currentPlayer.toUpperCase()} has won!`;
+            gameActive = false;
+            return;
+        }
+    
+        const roundDraw = !gameState.includes(null);
+        if (roundDraw) {
+            statusDisplay.textContent = "Draw!";
+            gameActive = false;
+            return;
+        }
+    }
+    
+    function drawWinningLine(start, end) {
+        const cellSize = 100;
+        const cellGap = 10;
+        const startX = Math.floor(start % 3) * (cellSize + cellGap) + cellSize / 2;
+        const startY = Math.floor(start / 3) * (cellSize + cellGap) + cellSize / 2;
+        const endX = Math.floor(end % 3) * (cellSize + cellGap) + cellSize / 2;
+        const endY = Math.floor(end / 3) * (cellSize + cellGap) + cellSize / 2;
+        
+        const ctx = winningLine.getContext("2d");
+        ctx.beginPath();
+        ctx.moveTo(startX, startY);
+        ctx.lineTo(endX, endY);
+        ctx.lineWidth = 5;
+        ctx.strokeStyle = "orange";
+        ctx.stroke();
+    }
+    
+    resetButton.addEventListener("click", initializeGame);
+    initializeGame();
+    </script>
+
+
+</body>
+</html>

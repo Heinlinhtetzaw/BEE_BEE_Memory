@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBM (Games)</title>
+    <link rel="icon" href="images/brain2.png"> 
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/tooltip.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- font-awesome link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body>
+    <!-- Navbar -->
+   <div class="navbar container-fluid" id="game">
+    <div class="brand">
+        <div><img src="images/brain2.png" alt="logo"></div>
+        <div class="logotext"><span>Bee Bee</span> Memory</div>
+    </div>
+    <div class="navtext">
+        <ul>
+            <li><a href="index.html" id="home"><i class="fa-sharp fa-solid fa-house"></i>&nbsp;Home</a></li>
+            <li><a href="aboutgame.html"><i class="fa-solid fa-bars"></i>&nbsp;About Games</a></li>
+            <li class="active1"><a href="game.html"><i class="fa-solid fa-gamepad"></i>&nbsp;Games</a></li>
+            <li><a href="Profilelud.jsp"><i class="fa-solid fa-user"></i>&nbsp;Profile</a></li>
+            <li><a href="Leaderboardud.jsp"><i class="fa-solid fa-star"></i>&nbsp;Leaderboard</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-address-book"></i>&nbsp;Contact</a></li>
+            <!-- Down Button  -->
+            <li class="active2"><a href="#footer" data-bs-toggle="tooltip"
+                title="Down"><i class="fa-solid fa-arrow-down"></i></a>
+            </li>
+        </ul>
+    </div>
+    </div>
+    <!-- End of Navbar -->
+
+    <!-- Choose Game  -->
+    <div class="choosegamepf container alert-danger text-white p-4 mt-2">
+        <div class="choosegamerow p-3">
+            <h2 class="text-secondary text-center">! Quickly To Play !</h2>
+        </div>
+        <div class="row justify-content-evenly">
+           
+            <div class="dropdown col-2">
+                <div class="btn btn-outline-danger dropdown-toggle p-3"
+                data-bs-toggle="dropdown" data-bs-target="#dropdownkids">Kids Level</div>
+                <ul class="dropdown-menu" id="dropdownkids">
+                    <li class="dropdown-item"><a href="#math">Math Game</a></li>
+                    <li class="dropdown-item"><a href="#colorcard">Color Card Game</a></li>
+                    <li class="dropdown-item"><a href="#fruitcardkids">Fruit Card Game</a></li>
+                    <li class="dropdown-item"><a href="#guesswordkids">Guess Word Game</a></li>
+                    <li class="dropdown-item"><a href="#wordscramblekids">Word Scramble Game</a></li>
+                </ul>
+            </div>
+
+            <div class="dropdown col-2">
+                <div class="btn btn-outline-danger dropdown-toggle p-3"
+                data-bs-toggle="dropdown" data-bs-target="#dropdowntoddlers">Toddlers Level</div>
+                <ul class="dropdown-menu" id="dropdowntoddlers">
+                    <li class="dropdown-item"><a href="#multiplying">Multiplying Game</a></li>
+                    <li class="dropdown-item"><a href="#card">Card Game</a></li>
+                    <li class="dropdown-item"><a href="#guesswordtoddlers">Guess Word Game</a></li>
+                    <li class="dropdown-item"><a href="#wordscrambletoddlers">Word Scramble Game</a></li>
+                </ul>
+            </div>
+
+            <div class="dropdown col-2">
+                <div class="btn btn-outline-danger dropdown-toggle p-3"
+                data-bs-toggle="dropdown" data-bs-target="#dropdownteenagers">Teenagers Level</div>
+                <ul class="dropdown-menu" id="dropdownteenagers">
+                    <li class="dropdown-item"><a href="#number">Number Game</a></li>
+                    <li class="dropdown-item"><a href="#brain">Brain Game</a></li>
+                    <li class="dropdown-item"><a href="#guesswordteenagers">Guess Word Game</a></li>
+                    <li class="dropdown-item"><a href="#wordscrambleteenagers">Word Scramble Game</a></li>
+                </ul>
+            </div>
+
+            <div class="dropdown col-2">
+                <div class="btn btn-outline-danger dropdown-toggle p-3"
+                data-bs-toggle="dropdown" data-bs-target="#dropdown2players">2 Players Type</div>
+                <ul class="dropdown-menu" id="dropdown2players">
+                    <li class="dropdown-item"><a href="#2playerscard">Card Game</a></li>
+                    <li class="dropdown-item"><a href="#2playerstictatoe">Tic Ta Toe Game</a></li>
+                    <li class="dropdown-item"><a href="#2playerscheckerboard">Checkerboard Game</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End of Choose Game  -->
+
+    <div class="container alert-danger text-white p-4 mt-2">
+        <h2 class="text-secondary text-center p-3">Kids Level</h2>
+    </div>
+
+    <!-- Math Game (Kids)  -->
+    <div class="mathpf gameprofile container text-light bg-secondary p-3 mt-4" id="math">
+        <div class="row justify-content-evenly p-3">
+            <div class="image col-5">
+                <img src="images/math1.png" alt="" class="rounded">
+            </div>
+            
+            <div class="gameinfo col-5 pt-4">
+                <!-- Game Name  -->
+                <h1 class="justify-content-center">Math Game </h1>
+                <!-- Age Level  -->
+                <h2>Recommend For Kids</h2>
+                <!-- About Game card  -->
+                <div class="card bg-info text-light">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h2>How to play?</h2>
+                        </div>
+                        <div class="card-text text-justify">
+                            <div>You can use math games to improve your math 
+                                skills. In the math game,we have to calaulate 
+                                the answer to the given question and enter the 
+                                correct answer.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Play Button  -->
+                <div class="playbutton">
+                    <div class="button mt-3">
+                        <div class="row">
+                            <a href="mathpf.html#mathpf" class="exitandplay btn btn-outline-info col-4 p-3 text-light" 
+                            title="Math Profile" data-bs-toggle="tooltip">Profile</a>
+                            <a href="MathLevel1.jsp" class="exitandplay btn btn-info col-4 p-3 text-light">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Color Card Game (Kids) -->
+    <div class="colorcardpf gameprofile container bg-secondary text-light p-3 mt-4" id="colorcard">
+        <div class="row justify-content-evenly p-3">
+            
+            <div class="gameinfo col-5 pt-4">
+                <!-- Game Name  -->
+                <h1 class="justify-content-center">Color Card Game </h1>
+                <!-- Age Level  -->
+                <h2>Recommend For Kids</h2>
+                <!-- About Game card  -->
+                <div class="card bg-info text-light">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h2>How to play?</h2>
+                        </div>
+                        <div class="card-text text-justify">
+                            <div>You have to choose the color cards within the time limit to win .Also, there are ways to customize the game.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Play Button  -->
+                <div class="playbutton">
+                    <div class="button mt-3 ">
+                        <div class="row">
+                            <a href="color cardpf.html#colorcardpf" class="exitandplay btn btn-outline-info col-4 p-3 text-light" 
+                            title="Color Card Profile" data-bs-toggle="tooltip">Profile</a>
+                            
+                            <a href="ColorLevel1.jsp" class="exitandplay btn btn-info col-4 p-3 text-light">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image col-5">
+                <img src="images/colorcard1.png" alt="" class="rounded">
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Fruit Card Game (Kids) -->
+    <div class="fruitcardkidspf gameprofile container bg-secondary text-light p-3 mt-4" id="fruitcardkids">
+        <div class="row justify-content-evenly p-3">
+            <div class="image col-5">
+                <img src="images/fruitcard.png" alt="" class="rounded">
+            </div>
+            
+            <div class="gameinfo col-5 pt-4">
+                <!-- Game Name  -->
+                <h1 class="justify-content-center">Fruit Card Game </h1>
+                <!-- Age Level  -->
+                <h2>Recommend For Kids</h2>
+                <!-- About Game card  -->
+                <div class="card bg-info text-light">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h2>How to play?</h2>
+                        </div>
+                        <div class="card-text text-justify">
+                            <div>
+                                The fruit card game where you have to find the pairs fruit cards. Concentrate to remember and find the pictures that match of beautiful cards in challenging levels. Make every picture matchup and level up your memoization, attention, focus and concentartion skills.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Play Button  -->
+                <div class="playbutton">
+                    <div class="button mt-3 ">
+                        <div class="row">
+                            <a href="fruitcardkidspf.html#fruitcardkidspf" class="exitandplay btn btn-outline-info col-4 p-3 text-light" 
+                            title="Fruit Card Profile" data-bs-toggle="tooltip">Profile</a>
+                            <a href="FruitLevel1.jsp" class="exitandplay btn btn-info col-4 p-3 text-light">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Guess Word Game (Kids) -->
+    <div class="guesswordkidspf gameprofile container text-light bg-secondary p-3 mt-4" id="guesswordkids">
+        <div class="row justify-content-evenly p-3">
+            
+            <div class="gameinfo col-5 pt-4">
+                <!-- Game Name  -->
+                <h1 class="justify-content-center">Guess Word Game </h1>
+                <!-- Age Level  -->
+                <h2>Recommend For Kids</h2>
+                <!-- About Game card  -->
+                <div class="card bg-info text-light">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h2>How to play?</h2>
+                        </div>
+                        <div class="card-text text-justify">
+                            <div>
+                                The guess word game is  wordaily that trains your mind with daily word challenges. This game is your search,  A perfect game to develop and improve writing and problem solving skills.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Play Button  -->
+                <div class="playbutton">
+                    <div class="button mt-3 ">
+                        <div class="row">
+                            <a href="guesswordkidspf.html#guesswordkidspf" class="exitandplay btn btn-outline-info col-4 p-3 text-light" 
+                            title="Guess Word Profile" data-bs-toggle="tooltip">Profile</a>
+                            <a href="KidGuessLevel1.jsp" class="exitandplay btn btn-info col-4 p-3 text-light">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image col-5">
+                <img src="images/guessword.png" alt="" class="rounded">
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Word Scramble Game (Kids) -->
+    <div class="wordscramblekidspf gameprofile container bg-secondary text-light p-3 mt-4" id="wordscramblekidspf">
+        <div class="row justify-content-evenly p-3">
+            <div class="image col-5">
+                <img src="images/wordscramble.png" alt="" class="rounded">
+            </div>
+            
+            <div class="gameinfo col-5 pt-4">
+                <!-- Game Name  -->
+                <h1 class="justify-content-center">Word Scramble Game </h1>
+                <!-- Age Level  -->
+                <h2>Recommend For Kids</h2>
+                <!-- About Game card  -->
+                <div class="card bg-info text-light">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h2>How to play?</h2>
+                        </div>
+                        <div class="card-text text-justify">
+                            <div>
+                                The Word scramble game is a fun and addictive word game to train your brain. This game is your search,  A perfect game to develop and improve writing and problem solving skills.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Play Button  -->
+                <div class="playbutton">
+                    <div class="button mt-3 ">
+                        <div class="row">
+                            <a href="wordscramblekidspf.html#wordscramblekidspf" class="exitandplay btn btn-outline-info col-4 p-3 text-light" 
+                            title="Word Scramble Profile" data-bs-toggle="tooltip">Profile</a>
+                            <a href="KidWordscrambleLevel1.jsp" class="exitandplay btn btn-info col-4 p-3 text-light">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="container alert-danger text-white p-4 mt-2">
+        <h2 class="text-secondary text-center p-3">Toddlers Level</h2>
+    </div>
+
+    <!-- Multiplying Game (Toddlers) -->
+    <div class="multiplyingpf gameprofile container bg-secondary text-light p-3 mt-4" id="multiplying">
+        <div class="row justify-content-evenly p-3">
+            
+            <div class="gameinfo col-5 pt-4">
+                <!-- Game Name  -->
+                <h1 class="justify-content-center">Multiplying Game </h1>
+                <!-- Age Level  -->
+                <h2>Recommend For Toddlers</h2>
+                <!-- About Game card  -->
+                <div class="card bg-warning text-light">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h2>How to play?</h2>
+                        </div>
+                        <div class="card-text text-justify">
+                            <div>The result of the multiplication of two numbers must be selected from the answers given below within the given second.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Play Button  -->
+                <div class="playbutton">
+                    <div class="button mt-3 ">
+                        <div class="row">
+                            <a href="multiplyingpf.html#multiplyingpf" class="exitandplay btn btn-outline-warning col-4 p-3 text-light" 
+                            title="Multiplying Profile" data-bs-toggle="tooltip">Profile</a>
+                            <a href="Multiplying1.jsp" class="exitandplay btn bg-warning col-4 p-3 text-light">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image col-5">
+                <img src="images/multiplying1.png" alt="" class="rounded">
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Card Game (Toddlers) -->
+    <div class="cardpf gameprofile container bg-secondary text-light p-3 mt-4" id="card">
+        <div class="row justify-content-evenly p-3">
+            <div class="image col-5">
+                <img src="images/emoji2.png" alt="" class="rounded">
+            </div>
+            
+            <div class="gameinfo col-5 pt-4">
+                <!-- Game Name  -->
+                <h1 class="justify-content-center">Card Game </h1>
+                <!-- Age Level  -->
+                <h2>Recommend For Toddlers</h2>
+                <!-- About Game card  -->
+                <div class="card bg-info text-light">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h2>How to play?</h2>
+                        </div>
+                        <div class="card-text text-justify">
+                            <div>The picture match game where you have to find the pairs od cards.Concentrate to remember and find the pictures that match of beautiful cards in challenging levels. Make every picture matchup and level up your memoization, attention, focus and concentartion skills.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Play Button  -->
+                <div class="playbutton">
+                    <div class="button mt-3 ">
+                        <div class="row">
+                            <a href="cardpf.html#cardpf" class="exitandplay btn btn-outline-info col-4 p-3 text-light" 
+                            title="Card Profile" data-bs-toggle="tooltip">Profile</a>
+                            <a href="EmojiLevel1.jsp" class="exitandplay btn btn-info col-4 p-3 text-light">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Guess Word Game (Toddlers) -->
+    <div class="guesswordtoddlerspf gameprofile container bg-secondary text-light p-3 mt-4" id="guesswordtoddlers">
+        <div class="row justify-content-evenly p-3">
+            
+            
+            <div class="gameinfo col-5 pt-4">
+                <!-- Game Name  -->
+                <h1 class="justify-content-center">Guess Word Game </h1>
+                <!-- Age Level  -->
+                <h2>Recommend For Toddlers</h2>
+                <!-- About Game card  -->
+                <div class="card bg-info text-light">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h2>How to play?</h2>
+                        </div>
+                        <div class="card-text text-justify">
+                            <div>
+                                The guess word game is  wordaily that trains your mind with daily word challenges. This game is your search,  A perfect game to develop and improve writing and problem solving skills.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Play Button  -->
+                <div class="playbutton">
+                    <div class="button mt-3 ">
+                        <div class="row">
+                            <a href="guesswordtoddlerspf.html#guesswordtoddlerspf" class="exitandplay btn btn-outline-info col-4 p-3 text-light" 
+                            title="Guess Word Profile" data-bs-toggle="tooltip">Profile</a>
+                            <a href="ToddlerguessLevel1.jsp" class="exitandplay btn btn-info col-4 p-3 text-light">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image col-5">
+                <img src="images/guessword.png" alt="" class="rounded">
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Word Scramble Game (Toddlers) -->
+    <div class="wordscrambletoddlerspf gameprofile container bg-secondary text-light p-3 mt-4" id="wordscrambletoddlers">
+        <div class="row justify-content-evenly p-3">
+            <div class="image col-5">
+                <img src="images/wordscramble.png" alt="" class="rounded">
+            </div>
+
+            <div class="gameinfo col-5 pt-4">
+                <!-- Game Name  -->
+                <h1 class="justify-content-center">Word Scramble Game </h1>
+                <!-- Age Level  -->
+                <h2>Recommend For Toddlers</h2>
+                <!-- About Game card  -->
+                <div class="card bg-info text-light">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h2>How to play?</h2>
+                        </div>
+                        <div class="card-text text-justify">
+                            <div>
+                                The Word scramble game is a fun and addictive word game to train your brain. This game is your search,  A perfect game to develop and improve writing and problem solving skills.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Play Button  -->
+                <div class="playbutton">
+                    <div class="button mt-3 ">
+                        <div class="row">
+                            <a href="wordscrambletoddlerspf.html#wordscrambletoddlerspf" class="exitandplay btn btn-outline-info col-4 p-3 text-light" 
+                            title="Word Scramble Profile" data-bs-toggle="tooltip">Profile</a>
+                            <a href="ToddlerwordscrambleLevel1.jsp" class="exitandplay btn btn-info col-4 p-3 text-light">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <div class="container alert-danger text-white p-4 mt-2">
+        <h2 class="text-secondary text-center p-3">Teenagers Level</h2>
+    </div>
+
+    <!-- Number Game (Teenagers) -->
+    <div class="numberpf gameprofile container bg-secondary text-light p-3 mt-4" id="number">
+        <div class="row justify-content-evenly p-3">
+            
+            
+            <div class="gameinfo col-5 pt-4">
+                <!-- Game Name  -->
+                <h1 class="justify-content-center">Number Game </h1>
+                <!-- Age Level  -->
+                <h2>Recommend For Teenagers</h2>
+                <!-- About Game card  -->
+                <div class="card bg-info text-light">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h2>How to play?</h2>
+                        </div>
+                        <div class="card-text text-justify">
+                            <div>
+                                Given a number,the sum of three of the numbers. Listed below must be the same as the given numbers.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Play Button  -->
+                <div class="playbutton">
+                    <div class="button mt-3 ">
+                        <div class="row">
+                            <a href="numberpf.html#numberpf" class="exitandplay btn btn-outline-info col-4 p-3 text-light" 
+                            title="Number Profile" data-bs-toggle="tooltip">Profile</a>
+                            <a href="3NumberLevel1.jsp" class="exitandplay btn btn-info col-4 p-3 text-light">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image col-5">
+                <img src="images/3number.png" alt="" class="rounded">
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Brain Game (Teenagers) -->
+    <div class="brainpf gameprofile container bg-secondary text-light p-3 mt-4" id="brain">
+        <div class="row justify-content-evenly p-3">
+            <div class="image col-5">
+                <img src="images/brain.png" alt="" class="rounded">
+            </div>
+
+            <div class="gameinfo col-5 pt-4">
+                <!-- Game Name  -->
+                <h1 class="justify-content-center">Brain Game </h1>
+                <!-- Age Level  -->
+                <h2>Recommend For Teenagers</h2>
+                <!-- About Game card  -->
+                <div class="card bg-warning text-light">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h2>How to play?</h2>
+                        </div>
+                        <div class="card-text text-justify">
+                            <div>
+                                You must note down the numbers during the given time that will be displayed and write them down within the specified time.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Play Button  -->
+                <div class="playbutton">
+                    <div class="button mt-3 ">
+                        <div class="row">
+                            <a href="brainpf.html#brainpf" class="exitandplay btn btn-outline-warning col-4 p-3 text-light" 
+                            title="Brain Profile" data-bs-toggle="tooltip">Profile</a>
+                            <a href="BrainLevel1.jsp" class="exitandplay btn btn-warning col-4 p-3 text-light">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <!-- Guess Word Game (Teenagers) -->
+    <div class="guesswordteenagerspf gameprofile container bg-secondary text-light p-3 mt-4" id="guesswordteenagers">
+        <div class="row justify-content-evenly p-3">
+            
+            <div class="gameinfo col-5 pt-4">
+                <!-- Game Name  -->
+                <h1 class="justify-content-center">Guess Word Game </h1>
+                <!-- Age Level  -->
+                <h2>Recommend For Teenagers</h2>
+                <!-- About Game card  -->
+                <div class="card bg-info text-light">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h2>How to play?</h2>
+                        </div>
+                        <div class="card-text text-justify">
+                            <div>
+                                The guess word game is  wordaily that trains your mind with daily word challenges. This game is your search,  A perfect game to develop and improve writing and problem solving skills.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Play Button  -->
+                <div class="playbutton">
+                    <div class="button mt-3 ">
+                        <div class="row">
+                            <a href="guesswordteenagerspf.html#guesswordteenagerspf" class="exitandplay btn btn-outline-info col-4 p-3 text-light" 
+                            title="Guess Word Profile" data-bs-toggle="tooltip">Profile</a>
+                            <a href="guessesLevel1.jsp" class="exitandplay btn btn-info col-4 p-3 text-light">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image col-5">
+                <img src="images/guessword.png" alt="" class="rounded">
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Word Scramble Game (Teenagers) -->
+    <div class="wordscrambleteenagerspf gameprofile container bg-secondary text-light p-3 mt-4" id="wordscrambleteenagers">
+        <div class="row justify-content-evenly p-3">
+            <div class="image col-5">
+                <img src="images/wordscramble.png" alt="" class="rounded">
+            </div>
+            
+            <div class="gameinfo col-5 pt-4">
+                <!-- Game Name  -->
+                <h1 class="justify-content-center">Word Scramble Game </h1>
+                <!-- Age Level  -->
+                <h2>Recommend For Teenagers</h2>
+                <!-- About Game card  -->
+                <div class="card bg-info text-light">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h2>How to play?</h2>
+                        </div>
+                        <div class="card-text text-justify">
+                            <div>
+                                The Word scramble game is a fun and addictive word game to train your brain. This game is your search,  A perfect game to develop and improve writing and problem solving skills.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Play Button  -->
+                <div class="playbutton">
+                    <div class="button mt-3 ">
+                        <div class="row">
+                            <a href="wordscrambleteenagerspf.html#wordscrambleteenagerspf" class="exitandplay btn btn-outline-info col-4 p-3 text-light" 
+                            title="Word Scramble Profile" data-bs-toggle="tooltip">Profile</a>
+                            <a href="WordscrambleLevel1.jsp" class="exitandplay btn btn-info col-4 p-3 text-light">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="container alert-danger text-white p-4 mt-2">
+        <h2 class="text-secondary text-center p-3">Two Players Type</h2>
+    </div>
+
+    <!-- Card Game (2 Players Type) -->
+    <div class="twoplayerscardpf gameprofile container bg-secondary text-light p-3 mt-4" id="2playerscard">
+        <div class="row justify-content-evenly p-3">
+            
+            <div class="gameinfo col-5 pt-4">
+                <!-- Game Name  -->
+                <h1 class="justify-content-center">Card Game </h1>
+                <!-- Age Level  -->
+                <h2>Recommend For 2 Players</h2>
+                <!-- About Game card  -->
+                <div class="card bg-info text-light">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h2>How to play?</h2>
+                        </div>
+                        <div class="card-text text-justify">
+                            <div>
+                                Two players card game is a picture game where two players have to find pairs of cards focus to remember and find beautiful cards and matching pictures in challenging levels .Match every picture and your memorization , attention ,improve your concentration skills.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Play Button  -->
+                <div class="playbutton">
+                    <div class="button mt-3 ">
+                        <div class="row">
+                            <a href="2playerscardpf.html#2playerscardpf" class="exitandplay btn btn-outline-info col-4 p-3 text-light" 
+                            title="Card Profile" data-bs-toggle="tooltip">Profile</a>
+                            <a href="2Playercard.html" class="exitandplay btn btn-info col-4 p-3 text-light">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image col-5">
+                <img src="images/2playercard1.png" alt="" class="rounded">
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Tic Ta Toe Game (2 Players Type) -->
+    <div class="twoplayerstictatoepf gameprofile container bg-secondary text-light p-3 mt-4" id="2playerstictatoe">
+        <div class="row justify-content-evenly p-3">
+            <div class="image col-5">
+                <img src="images/2playertictatoe1.png" alt="" class="rounded">
+            </div>
+            
+            <div class="gameinfo col-5 pt-4">
+                <!-- Game Name  -->
+                <h1 class="justify-content-center">Tic Ta Toe Game </h1>
+                <!-- Age Level  -->
+                <h2>Recommend For 2 Players</h2>
+                <!-- About Game card  -->
+                <div class="card bg-info text-light">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h2>How to play?</h2>
+                        </div>
+                        <div class="card-text text-justify">
+                            <div>
+                                Fill all within the square bar must be filled with X or O adjacent to the row or column .X or O must be aligned with the horizontal row or diagonal row.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Play Button  -->
+                <div class="playbutton">
+                    <div class="button mt-3 ">
+                        <div class="row">
+                            <a href="2playerstic ta toepf.html#2playerstictatoepf" class="exitandplay btn btn-outline-info col-4 p-3 text-light" 
+                            title="Tic Ta Toe Profile" data-bs-toggle="tooltip">Profile</a>
+                            <a href="2PlayerTicTaToe.html" class="exitandplay btn btn-info col-4 p-3 text-light">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Checkerboard Game (2 Players Type) -->
+    <div class="twoplayerscheckerboardpf gameprofile container bg-secondary text-light p-3 mt-4" id="2playerscheckerboard">
+        <div class="row justify-content-evenly p-3">
+            
+            <div class="gameinfo col-5 pt-4">
+                <!-- Game Name  -->
+                <h1 class="justify-content-center">Cheakerboard Game </h1>
+                <!-- Age Level  -->
+                <h2>Recommend For 2 Players</h2>
+                <!-- About Game card  -->
+                <div class="card bg-info text-light">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h2>How to play?</h2>
+                        </div>
+                        <div class="card-text text-justify">
+                            <div>
+                                This game is a game where one player can play the other side. There is a white square and a black square on each side. If the white square is C and the other square is white, then this game is successful.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Play Button  -->
+                <div class="playbutton">
+                    <div class="button mt-3 ">
+                        <div class="row">
+                            <a href="2playerscheckerboardpf.html#2playerscheckerboardpf" class="exitandplay btn btn-outline-info col-4 p-3 text-light" 
+                            title="Checkerboard Profile" data-bs-toggle="tooltip">Profile</a>
+                            <a href="2Playercheckboard.html" class="exitandplay btn btn-info col-4 p-3 text-light">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image col-5">
+                <img src="images/cheakerboard.jpg" alt="" class="rounded">
+            </div>
+        </div>
+        
+    </div>
+
+
+    <!-- Up Button -->
+    <div class="up">
+        <a href="#game" class="btn btn-danger" 
+        data-bs-toggle="tooltip" title="Up"><i class="fa-solid fa-arrow-up"></i></a> 
+    </div>
+    <!-- End of Up Button  -->
+
+    <!-- Footer -->
+    <div class="container-fluid bg-dark" id="footer">
+        <div class="footerlogo row">
+            <h2 class="col-4" data-bs-toggle="tooltip" title="Our Website"><img src="images/brain2.png" alt="" width="50px">Bee Bee Memory</h2>
+        </div>
+        <div class="row bg-dark text-white justify-content-between p-4">
+            <div class="r1 col-3 row">
+                <h3>Contact Us</h3>
+                <ul class="col-6">
+                    
+                    <li><a class="btn btn-outline-danger" href="index.html#index" data-bs-toggle="tooltip" title="Facebook: Bee Bee Memory"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a class="btn btn-outline-danger" href="aboutgame.html#aboutgame" data-bs-toggle="tooltip" title="Messenger: Bee Bee Memory"><i class="fa-brands fa-facebook-messenger"></i></a></li>
+                    <li><a class="btn btn-outline-danger" href="game.html#game" data-bs-toggle="tooltip" title="Instagram: Bee Bee Memory"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a class="btn btn-outline-danger" href="profile.html#profile" data-bs-toggle="tooltip" title="Telegram: Bee Bee Memory"><i class="fa-brands fa-telegram"></i></a></li>
+                    
+                </ul>
+                
+            </div>
+            <div class="r2 col-3">
+                <ul>
+                    <h3>Website Links</h3>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutgame.html">About Games</a></li>
+                    <li><a href="game.html#game">Games</a></li>
+                    <li><a href="Profilelud.jsp">Profile</a></li>
+                    <li><a href="Leaderboardud.jsp">Leaderboard</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="r3 col-3">    
+                <ul>
+                    <h3>Game Links</h3>
+                    <li><a href="mathpf.html#mathpf" data-bs-toggle="tooltip" title="kids level">Math Game</a></li>
+                    <li><a href="color cardpf.html#colorcardpf" data-bs-toggle="tooltip" title="kids level">Color Card Game</a></li>
+                    <li><a href="fruitcardkidspf.html#fruitcardkidspf" data-bs-toggle="tooltip" title="kids level">Fruit Card Game</a></li>
+                    <li><a href="guesswordkidspf.html#guesswordkidspf" data-bs-toggle="tooltip" title="kids level">Guess Word Game</a></li>
+                    <li><a href="wordscramblekidspf.html#wordscramblekidspf" data-bs-toggle="tooltip" title="kids level">Word Scramble Game</a></li>
+                    <li><a href="multiplyingpf.html#multiplyingpf" data-bs-toggle="tooltip" title="Toddlers level">Multiplying Game</a></li>
+                    <li><a href="cardpf.html#cardpf" data-bs-toggle="tooltip" title="Toddlers level">Card Game</a></li>
+                    <li><a href="guesswordtoddlerspf.html#guesswordtoddlerspf" data-bs-toggle="tooltip" title="Toddlers level">Guess Word Game</a></li>
+                </ul>
+            </div>
+            <div class="r4 col-3">    
+                <ul>
+                    <h3>Game Links</h3>
+                    
+                    <li><a href="wordscrambletoddlerspf.html#wordscrambletoddlerspf" data-bs-toggle="tooltip" title="Toddlers level">Word Scramble Game</a></li>
+                    <li><a href="numberpf.html#numberpf" data-bs-toggle="tooltip" title="Teenagers level">Number Game</a></li>
+                    <li><a href="brainpf.html#brainpf" data-bs-toggle="tooltip" title="Teenagers level">Brain Game</a></li>
+                    <li><a href="guesswordteenagerspf.html#guesswordteenagerspf" data-bs-toggle="tooltip" title="Teenagers level">Guess Word Game</a></li>
+                    <li><a href="wordscrambleteenagerspf.html#wordscrambleteenagerspf" data-bs-toggle="tooltip" title="Teenagers level">Word Scramble Game</a></li>
+                    <li><a href="2playerscardpf.html#2playerscardpf" data-bs-toggle="tooltip" title="2 Players Type">Card Game</a></li>
+                    <li><a href="2playerstic ta toepf.html#2playerstictatoepf" data-bs-toggle="tooltip" title="2 Players Type">Tic Ta Toe Game</a></li>
+                    <li><a href="2playerscheckerboardpf.html#2playerscheckerboardpf" data-bs-toggle="tooltip" title="2 Players Type">Checkarboard Game</a></li>
+                </ul>
+            </div>
+
+        </div>
+        
+    </div>
+    <div class="container-fluid bg-danger">
+        <div class="footertext column p-2 text-white text-center">
+            <h5 >&copy; copyright! all right reserved</h5>
+            <h6 >Designed By Bee Bee Memory</h6>
+        </div>
+    </div>
+    <!-- End of Footer -->
+    
+</body>
+</html>

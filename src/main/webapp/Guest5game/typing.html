@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="typing.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Word Game</title>
+</head>
+<body>
+  
+    <header>
+      <h1 class="header">Word Game</h1>
+    </header>
+    <div class="container">
+      <div class="desc">
+        <p>Fill the word above input within <strong>5</strong> seconds:</p>
+      </div>
+      <h1 class="word"></h1>
+      <input type="text" placeholder="Start typing..." autofocus>
+      <h3 class="output"></h3>
+      <h3>Time left: <span id="time"></span></h3>
+      <h3>Score: <span id="score"></span></h3>
+      <div class="instruction">
+        <h4>Instructions</h4>
+        <p>Type each word in the given amount of second to score. To play again, just type the current word. Your score will reset</p>
+    </div>
+  </div>
+  
+  <script>
+    window.addEventListener('load', init);
+
+// Global variables 
+const word = document.querySelector('.word');
+const timeLeft= document.getElementById('time');
+const scoreLeft = document.getElementById('score');
+const output = document.querySelector('.output');
+const input = document.querySelector('input');
+
+let time = 5;
+let score = 0;
+let isPlaying; 
+
+
+
+const words = [
+  'regardless',
+  'nonplussed',
+  'enormity',
+  'unabashed',
+  'abnegation',
+  'abstruse',
+  'accretion',
+  'admonish',
+  'adumbrate',
+  'ambivalent',
+  'approbation',
+  'arbitrary',
+  'arcane',
+  'aspersion',
+  'consign',
+  'denigrate',
+  'didactic',
+  'duplicity',
+  'emend',
+  'fortuitous',
+  'impute',
+  'injunction',
+  'licentious',
+  'mawkish',
+  'officious',
+  'beguile',
+  'callous', 
+  'spurious', 
+  'foreign',
+  'brasil',
+  'portugese',
+  'amunt',
+  'increase',
+  'calculate',
+  'moodish',
+  'goalkeeper',
+  'about',
+  'drama',
+  'supposed',
+  'feature',
+  'schedule',
+  'browser',
+  'borthers',
+  'creature',
+  'superbowl',
+  'lockdown',
+  'london',
+  'bridge',
+  'seriously',
+  'appear',
+  'access',
+  'kickdown',
+  'ring',
+  'wallpaper',
+  'shelf',
+  'vacuum',
+  'baggage',
+  'various',
+  'yearbook',
+  'stargate',
+  'proceed',
+  'therefore',
+  'extract',
+  'necessarily',
+  'necessary',
+  'reference',
+  'slight',
+  'slightly',
+  'truthful',
+  'stressful',
+  'stutter',
+  'premature',
+  'insubordinate',
+  'churlish',
+  'contribute',
+  'ending',
+  'spacing',
+  'letter',
+  'bookshelves',
+  'computer',
+  'belt',
+  'drinking',
+  'fucked',
+  'greatly',
+  'totally',
+  'indeed',
+  'specious',
+  'curious',
+  'atlanta',
+  'sydney',
+  'toronto',
+  'indiana',
+  'tennessee',
+  'board',
+  'ill',
+  'sick',
+  'pain',
+  'goosebumps',
+  'baby',
+  'collect',
+  'flashlight',
+  'thought',
+  'mential',
+  'score',
+  'bored',
+  'smash',
+  'flash',
+  'throughout',
+  'william',
+  'kety',
+  'silly',
+  'body',
+  'arm',
+  'mouse',
+  'seasite',
+  'beach',
+  'trees',
+  'manchester',
+  'borrow',
+  'arrow',
+  'slice',
+  'beer',
+  'flubsy',
+  'tennis',
+  'football',
+  'baseball',
+  'bestseller',
+  'mountain',
+  'glacier',
+  'slash',
+  'germany',
+  'dictionary',
+  'pen',
+  'ass',
+  'brother',
+  'mother',
+  'hardly',
+  'folks',
+  'something',
+  'anything',
+  'slut',
+  'beach',
+  'pocket',
+  'cringey',
+  'slutty',
+  'oddly',
+  'mysterious',
+  'bob',
+  'fish',
+  'mood',
+  'suspected',
+  'cottage',
+  'cloud',
+  'amount',
+  'entertainment',
+  'encourage',
+  'development',
+  'skyscrapper',
+  'washington',
+  'wizzards',
+  'bulls',
+  'bells',
+  'heaven',
+  'stairway',
+  'touchdown',
+  'zealand',
+  'china',
+  'coronavirus',
+  'spreading',
+  'bringing',
+  'shout',
+  'sadly',
+  'although',
+  'suspicious',
+  'recovery',
+  'pencil',
+  'youghurt',
+  'guns',
+  'roses',
+  'currencies',
+  'cryptocurrency',
+  'exchange',
+  'school',
+  'theory',
+  'theater',
+  'shakespeare',
+  'water',
+  'bite',
+  'working'
+];
+
+
+// functions while rendering 
+function init() {
+// init basic value
+  initbasic(timeLeft, scoreLeft)
+// get arrays words into html output 
+  showWord(words);
+// checking word input with word displayed
+  input.addEventListener('input', match);
+//counting time % ending game
+  setInterval(timing, 1000);
+
+}
+
+function initbasic(timeLeft, scoreLeft) {
+  timeLeft.innerHTML = time;
+  scoreLeft.innerHTML = score;
+}
+
+function showWord(words) {
+  word.innerHTML = words[Math.floor(Math.random() * words.length)];
+}
+
+function timing() {
+  if(time > 0) {
+    time--;
+  } else if (time === 0) {
+    isPlaying = false;
+  } 
+  if (!isPlaying && time === 0) {
+    output.innerHTML = '<p>Game Over!!!   Refresh page</p>';
+    score = 0;
+    input.remove()
+  }
+  timeLeft.innerHTML = time;
+}
+
+function match() {
+  if(matchCondition()) {
+    isPlaying = true;
+    output.innerHTML = '';
+    input.value = '';
+    showWord(words);
+    score++;
+    time = 6;
+  } 
+  scoreLeft.innerHTML = score;
+  let number = input.value.length - 1;
+  if(input.value.slice(-1) === word.innerHTML[number]) {
+    input.style.color = "#061e3e";
+  } else {
+    input.style.color = "red";
+  }
+}
+
+
+function matchCondition(){
+  if(input.value === word.innerHTML) {
+    return true;
+  } else {
+    return false;
+  }
+}
+  </script>
+</body>
+</html>

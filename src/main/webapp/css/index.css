@@ -1,0 +1,199 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppens',sans-serif;
+}
+body{
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* background: url("../image/ai\ wb.jpg") no-repeat center center fixed; */
+        background: linear-gradient(45deg, #fbc2eb, #78a3eb);
+        background-size: cover;
+        min-height: 100%;
+        overflow: hidden; 
+        
+}
+
+
+header
+{
+    position: fixed;
+    left:0;
+    top:0;
+    width:100%;
+    padding: 20px 30px; 
+    display: flex;
+    z-index: 1000;
+    justify-content: space-between;
+    align-items:center;
+    background:transpatren;
+    
+
+}
+
+header img{
+    width: 10%;
+    height: 10%;
+    
+ }
+.navigation a {
+    position: relative;
+    font-size: 0.5cm;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transform: scaleX(0);
+
+}
+.navigation a:hover::after{
+    transform: scaleX(1);
+    transition: .5s;
+    transform-origin: right;
+
+}
+ .navigation .btnLogin-popup{
+width:100px;
+height: 50px;
+border: 1px solid;
+border-radius: 5px;
+background: transparent;
+border: none;
+cursor: pointer;
+font-size: 1.1em;
+font-weight: 500;
+color:white;
+margin-left: 10px;
+transition: .5s;
+
+}
+.navigation .btnLogin-popup:hover{
+	
+    color: black;
+}
+
+
+.game-container {
+    padding-top: 8rem;
+    text-align: center;
+  }
+
+  .game-container .heading {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 2rem;
+  }
+
+  .game-container .box-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 1.5rem;
+    padding: 1rem;
+    align-items: flex-start;
+    margin: 0 5rem;
+  }
+
+  .game-container .box-container .box {
+    flex: 0 0 auto;
+    width: 300px;
+    position: relative;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    background: linear-gradient(-45deg, #fbc2eb, #78a3eb);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(54, 53, 53, 0.1);
+    overflow: hidden;
+    text-decoration: none;
+  }
+
+  .game-container .box-container .box img {
+    height: 13rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+  }
+
+  .game-container .box-container .box h3 {
+    font-size: 1.3rem;
+    color: white;
+    margin-top: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .game-container .box-container .box:hover h3 {
+    color: #555;
+  }
+  
+  footer {
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    min-height: calc(100vh );
+    position: relative;
+    bottom: 0;
+} 
+
+footer p {
+    text-align: center;
+    margin: 0;
+}
+   /* Modal Styles */
+   .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.4); 
+    padding-top: 0; /* No padding at the top */
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 400px;
+    text-align: center;
+    border-radius: 8px;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset by half its width and height */
+}
+#modalMessage {
+    font-size: 24px; /* Set to a larger font size */
+    margin: 0; /* Remove default margin */
+}
+.close {
+    background: linear-gradient(45deg, #fbc2eb, #78a3eb); /* Green */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.close:hover {
+   background: linear-gradient(45deg, #78a3eb, #fbc2eb); /* Darker green */
+}
+  

@@ -1,0 +1,86 @@
+body {
+    background-color: #061e3e;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    user-select: none;
+  }
+  
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .container {
+    width: 500px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .header {
+    background-color: #f1f1f1;
+    color: #061e3e;
+    text-align: center;
+    letter-spacing: 2px;
+    padding: 20px
+  }
+  
+  .desc {
+    margin: 40px 0; 
+    font-size: 1.25rem;
+    word-spacing: 2px;
+  }
+  
+  .word {
+    font-size: 72px;
+    margin: 0 0 40px 0;
+  }
+  
+  input {
+    width: 80%;
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1.25rem;
+    color: #061e3e;
+  }
+  
+  .output {
+    margin: 20px 0;
+  }
+  
+  h3 {
+    margin: 10px 0;
+    letter-spacing: 1px;
+  }
+  
+  .instruction {
+    margin: 30px 0;
+    padding: 40px;
+    font-size: 1.25rem;
+  }
+  
+  .instruction h4 {
+    letter-spacing: 2px;
+    font-size: 22px;
+  }
+  
+  .instruction p {
+    margin: 10px 0 0 0;
+  }
+  .icon{
+    font-size: 1.5cm;
+    text-decoration:none;
+    margin-top: -4cm;
+    margin-left: 1cm;
+  }
+  .icon a{
+    color: #d9ff00; 
+  }
+  
+  @media(max-width: 375px) {
+    .container {
+      width: 375px;
+    }
+  }

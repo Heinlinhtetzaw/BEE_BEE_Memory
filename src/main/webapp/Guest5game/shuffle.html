@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Puzzle Game</title>
+   <link rel="stylesheet" type="text/css" href="shuffle.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+	
+   <div class="game-container row">
+      <div class="column">
+         <div>
+            <h2>🧩 15 Puzzle Game</h2>
+         </div>
+         <div id="timer">Timer: 0s</div>
+         <div id="moves">Moves: 0</div>
+         <p></p>
+         <button id="shuffle-button">Shuffle</button>
+      </div>
+	  
+      <div id="puzzle-container" class="column">
+      </div>
+      <div id="win-overlay" class="hidden">
+         <div class="balloons"></div>
+         <div class="graffiti"></div>
+      </div>
+   </div>
+  
+	
+  
+   <script>
+      document.addEventListener("DOMContentLoaded", () => {
+	const puzzleContainer = document.getElementById("puzzle-container");
+	const shuffleButton = document.getElementById("shuffle-button");
+	const timerDisplay = document.getElementById("timer");
+	const movesDisplay = document.getElementById("moves");
+	const winOverlay = document.getElementById('win-overlay');
+	
+	let tiles = [];
+	let emptyIndex = 16;
+	let moves = 0;
+	let startTime;
+	let timerInterval;
+
+
+	
+	const initPuzzle = () => {
+		tiles = Array.from({ length: 15 }, (_, i) => i + 1);
+		tiles.push(null);
+		renderPuzzle();
+	};
+
+	const renderPuzzle = () => {
+		puzzleContainer.innerHTML = "";
+		tiles.forEach((tile, index) => {
+			const tileElement = document.createElement("div");
+			tileElement.classList.add("tile");
+			if (tile === null) {
+				tileElement.classList.add("empty");
+				emptyIndex = index;
+			} else {
+				tileElement.textContent = tile;
+				tileElement.addEventListener("click", () => moveTile(index));
+			}
+			tileElement.style.transform = `translate(${(index % 4) * 5}px, ${
+				Math.floor(index / 4) * 5
+			}px)`;
+			puzzleContainer.appendChild(tileElement);
+		});
+	};
+
+	const moveTile = (index) => {
+		const validMoves = [
+			emptyIndex - 1,
+			emptyIndex + 1,
+			emptyIndex - 4,
+			emptyIndex + 4
+		];
+		if (validMoves.includes(index)) {
+			[tiles[emptyIndex], tiles[index]] = [tiles[index], tiles[emptyIndex]];
+			emptyIndex = index;
+			moves++;
+			movesDisplay.textContent = `Moves: ${moves}`;
+			renderPuzzle();
+			checkWinCondition();
+		}
+	};
+
+	const shuffleTiles = () => {
+		for (let i = tiles.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[tiles[i], tiles[j]] = [tiles[j], tiles[i]];
+		}
+		renderPuzzle();
+	};
+
+	const startTimer = () => {
+		startTime = Date.now();
+		timerInterval = setInterval(() => {
+			const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
+			timerDisplay.textContent = `Time: ${elapsedTime}s`;
+		}, 1000);
+	};
+
+	const resetGame = () => {
+		clearInterval(timerInterval);
+		moves = 0;
+		movesDisplay.textContent = "Moves: 0";
+		timerDisplay.textContent = "Time: 0s";
+		startTimer();
+	};
+
+	const checkWinCondition = () => {
+		const isComplete = tiles
+			.slice(0, 15)
+			.every((tile, index) => tile === index + 1);
+		if (isComplete) {
+			clearInterval(timerInterval);
+			setTimeout(() => alert("You Win!"), 100);
+		
+		}
+	};
+
+	shuffleButton.addEventListener("click", () => {
+		shuffleTiles();
+		resetGame();
+	});
+
+	initPuzzle();
+	startTimer();
+});
+
+   </script>
+</body>
+</html>

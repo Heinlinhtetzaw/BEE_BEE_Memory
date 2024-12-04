@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplying Game(For Toddlers)</title>
+    <link rel="icon" href="images/multiplying1.png"> 
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/tooltip.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- font-awesome link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar container-fluid" id="game">
+        <div class="brand">
+            <div><img src="images/brain2.png" alt="logo"></div>
+            <div class="logotext"><span>Bee Bee</span> Memory</div>
+        </div>
+        <div class="navtext">
+            <ul>
+                <li><a href="index.html" id="home"><i class="fa-sharp fa-solid fa-house"></i>&nbsp;Home</a></li>
+                <li><a href="aboutgame.html"><i class="fa-solid fa-bars"></i>&nbsp;About Games</a></li>
+                <li class="active1"><a href="game.html"><i class="fa-solid fa-gamepad"></i>&nbsp;Games</a></li>
+                <li><a href="profile.html"><i class="fa-solid fa-user"></i>&nbsp;Profile</a></li>
+                <li><a href="leaderboard.html"><i class="fa-solid fa-star"></i>&nbsp;Leaderboard</a></li>
+                <li><a href="contact.html"><i class="fa-solid fa-address-book"></i>&nbsp;Contact</a></li>
+                <!-- Down Button  -->
+                <li class="active2"><a href="#footer" data-bs-toggle="tooltip"
+                    title="Down"><i class="fa-solid fa-arrow-down"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- End of Navbar -->
+    <div class="container mt-3">
+        <div class="row justify-content-center p-2">
+            <h1 class="col-4"><img src="images/brain8.png" alt="" width="100px">Games<img src="images/brain8.png" alt="" width="100px"></h1>
+        </div>
+    </div>
+    <!-- Image Carousel -->
+    <div class="imagecarousel container-fluid p-4">
+        <div class="row justify-content-center">
+            <div class="carousel slide col-8 " data-bs-ride="carousel" id="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" ></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" ></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" ></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="4" ></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="5" ></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="6" ></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="7" ></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="8" ></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="9" ></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="10" ></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="11" ></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="12" ></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="13" ></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="14" ></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="15" ></button>
+                </div>
+    
+                <div class="carousel-inner">
+                    <!-- Math Game  Kids-->
+                    <div class="carousel-item active">
+                        <img src="images/math1.png" height="400px" alt="home" class="d-block rounded" data-bs-toggle="tooltip" title="Math Game (Kids)" style="width:100%">
+                        <div class="carousel-caption">
+                            <a href="mathpf.html#mathpf" class="btn btn-primary col-4 p-2">Play</a>
+                          </div>
+                    </div>
+                    <!-- Color Card Game Kids-->
+                    <div class="carousel-item">
+                        <img src="images/colorcard1.png" height="400px" alt="home" class="d-block rounded" data-bs-toggle="tooltip" title="Color Card Game (Kids)" style="width:100%">
+                        <div class="carousel-caption">
+                            <a href="color cardpf.html#colorcardpf" class="btn btn-primary col-4 p-2">Play</a>
+                          </div>
+                    </div>
+                    
+                    <!-- Fruit Card Kids-->
+                    <div class="carousel-item">
+                        <img src="images/fruitcard.png" height="400px" alt="home" class="d-block rounded" data-bs-toggle="tooltip" title="Fruit Card Game (Kids)"  style="width:100%">
+                        <div class="carousel-caption">
+                            <a href="fruitcardkidspf.html#fruitcardkidspf" class="btn btn-primary col-4 p-2">Play</a>
+                          </div>
+                    </div>
+                    <!-- Guess word Kids-->
+                    <div class="carousel-item">
+                        <img src="images/guessword.png" height="400px" alt="home" class="d-block rounded" data-bs-toggle="tooltip" title="Guess Word Game (Kids)" style="width:100%">
+                        <div class="carousel-caption">
+                            <a href="guesswordkidspf.html#guesswordkidspf" class="btn btn-primary col-4 p-2">Play</a>
+                          </div>
+                    </div>
+                    <!-- Word scramble Kids-->
+                    <div class="carousel-item">
+                        <img src="images/wordscramble.png" height="400px" alt="home" class="d-block rounded" data-bs-toggle="tooltip" title="Word Scramble Game (Kids)" style="width:100%">
+                        <div class="carousel-caption">
+                            <a href="wordscramblekidspf.html#wordscramblekidspf" class="btn btn-primary col-4 p-2">Play</a>
+                          </div>
+                    </div>
+
+                    <!-- Multiplying Game Toddlers-->
+                    <div class="carousel-item">
+                        <img src="images/multiplying1.png" height="400px" alt="home" class="d-block rounded" data-bs-toggle="tooltip" title="Multiplying Game (Toddlers)" style="width:100%">
+                        <div class="carousel-caption">
+                            <a href="multiplyingpf.html#multiplyingpf" class="btn btn-primary col-4 p-2">Play</a>
+                          </div>
+                    </div>
+                    <!-- Card Game Toddlers-->
+                    <div class="carousel-item">
+                        <img src="images/emoji2.png" height="400px" alt="home" class="d-block rounded" data-bs-toggle="tooltip" title="Card Game (Toddlers)" style="width:100%">
+                        <div class="carousel-caption">
+                            <a href="cardpf.html#cardpf" class="btn btn-primary col-4 p-2">Play</a>
+                          </div>
+                    </div>
+                    <!-- Guess word Toddlers-->
+                    <div class="carousel-item">
+                        <img src="images/guessword.png" height="400px" alt="home" class="d-block rounded" data-bs-toggle="tooltip" title="Guess Word Game (Toddlers)" style="width:100%">
+                        <div class="carousel-caption">
+                            <a href="guesswordtoddlerspf.html#guesswordtoddlerspf" class="btn btn-primary col-4 p-2">Play</a>
+                          </div>
+                    </div>
+                    <!-- Word scramble Toddlers-->
+                    <div class="carousel-item">
+                        <img src="images/wordscramble.png" height="400px" alt="home" class="d-block rounded" data-bs-toggle="tooltip" title="Word Scramble Game (Toddlers)" style="width:100%">
+                        <div class="carousel-caption">
+                            <a href="wordscrambletoddlerspf.html#wordscrambletoddlerspf" class="btn btn-primary col-4 p-2">Play</a>
+                          </div>
+                    </div>
+                    
+                    <!-- Number Game Teenagers-->
+                    <div class="carousel-item">
+                        <img src="images/3number.png" height="400px" alt="home" class="d-block rounded" data-bs-toggle="tooltip" title="Number Game (Teenagers)" style="width:100%">
+                        <div class="carousel-caption">
+                            <a href="numberpf.html#numberpf" class="btn btn-primary col-4 p-2">Play</a>
+                          </div>
+                    </div>
+                    <!-- Brain Game Teenagers-->
+                    <div class="carousel-item">
+                        <img src="images/brain.png" height="400px" alt="home" class="d-block rounded" data-bs-toggle="tooltip" title="Brain Game (Teenagers)" style="width:100%">
+                        <div class="carousel-caption">
+                            <a href="brainpf.html#brainpf" class="btn btn-primary col-4 p-2">Play</a>
+                          </div>
+                    </div>
+                    <!-- Guess word Teenagers-->
+                    <div class="carousel-item">
+                        <img src="images/guessword.png" height="400px" alt="home" class="d-block rounded" data-bs-toggle="tooltip" title="Guess Word Game (Teenagers)" style="width:100%">
+                        <div class="carousel-caption">
+                            <a href="guesswordteenagerspf.html#guesswordteenagerspf" class="btn btn-primary col-4 p-2">Play</a>
+                          </div>
+                    </div>
+                    <!-- Word scramble Teenagers-->
+                    <div class="carousel-item">
+                        <img src="images/wordscramble.png" height="400px" alt="home" class="d-block rounded" data-bs-toggle="tooltip" title="Word Scramble Game (Teenagers)" style="width:100%">
+                        <div class="carousel-caption">
+                            <a href="wordscrambleteenagerspf.html#wordscrambleteenagerspf" class="btn btn-primary col-4 p-2">Play</a>
+                          </div>
+                    </div>
+
+                    <!-- 2 Players Card Game -->
+                    <div class="carousel-item">
+                        <img src="images/2playercard1.png" height="400px" alt="home" class="d-block rounded" data-bs-toggle="tooltip" title="Card Game (2 Players)" style="width:100%">
+                        <div class="carousel-caption">
+                            <a href="2playerscardpf.html#2playerscardpf" class="btn btn-primary col-4 p-2">Play</a>
+                          </div>
+                    </div>
+                    <!-- 2 Players Tic Ta Toe Game  -->
+                    <div class="carousel-item">
+                        <img src="images/2playertictatoe1.png" height="400px" alt="home" class="d-block rounded" data-bs-toggle="tooltip" title="Tic Ta Toe Game (2 Players)" style="width:100%">
+                        <div class="carousel-caption">
+                            <a href="2playerstic ta toepf.html#2playerstictatoepf" class="btn btn-primary col-4 p-2">Play</a>
+                          </div>
+                    </div>
+                    <!-- 2 Players Checkerboard Game  -->
+                    <div class="carousel-item">
+                        <img src="images/cheakerboard.jpg" height="400px" alt="home" class="d-block rounded" data-bs-toggle="tooltip" title="Checkerboard Game (2 Players)" style="width:100%">
+                        <div class="carousel-caption">
+                            <a href="2playerscheckerboardpf.html#2playerscheckerboardpf" class="btn btn-primary col-4 p-2">Play</a>
+                          </div>
+                    </div>
+                </div>
+    
+                <button type="button" class="carousel-control-prev" data-bs-target="#carousel" data-bs-slide="prev">
+                    <i class="leftandright fa-solid fa-arrow-left"></i></a>
+                </button>
+                <button type="button" class="carousel-control-next" data-bs-target="#carousel" data-bs-slide="next">
+                   <i class="leftandright fa-solid fa-arrow-right"></i></a>
+                </button>
+                <style>
+                    .leftandright{
+                        background-color:rgb(27, 26, 26);
+                        border-radius: 10px;
+                        padding:10px 20px;
+                    }
+                </style>
+            </div>
+        </div>
+    </div>
+    <!-- End of Image Carousel  -->
+    <!-- Back Button  -->
+    <!-- <div class="container p-2" >
+        <div class="row">
+            <a href="game.html" class="btn btn-primary col-1">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+        </div>
+    </div> -->
+    <!-- End of Back Button  -->
+    <!-- Game Profile  -->
+    <div class="multiplyingpf gameprofile container bg-secondary text-light p-3 mt-4" id="multiplyingpf">
+        <div class="row justify-content-evenly p-3">
+            <div class="image col-5">
+                <img src="images/multiplying1.png" alt="" class="rounded">
+            </div>
+            
+            <div class="gameinfo col-5 pt-4">
+                <!-- Game Name  -->
+                <h1 class="justify-content-center">Multiplying Game </h1>
+                <!-- Age Level  -->
+                <h2>Recommend For Toddlers</h2>
+                <!-- About Game card  -->
+                <div class="card bg-warning text-light">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h2>How to play?</h2>
+                        </div>
+                        <div class="card-text text-justify">
+                            <div>The result of the multiplication of two numbers must be selected from the answers given below within the given second.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Play Button  -->
+                <div class="playbutton">
+                    <div class="button mt-3 ">
+                        <div class="row">
+                            <a href="" class="exitandplay btn btn-outline-warning col-4 p-3 text-light" 
+                            data-bs-target="#modal" data-bs-toggle="modal">Exit</a>
+                            <!-- modal -->
+                            <div class="modal fade" data-bs-backdrop="static" id="modal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <img src="images/brain1.png" alt="" width="50px">
+                                            <div class="text-danger">Bee Bee Memory</div>
+                                            <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h2 class="text-dark text-center">Do you want to exit?</h2>
+                                        </div>
+                                       <div class="modal-footer">
+                                            <a href="" class="modalbutton btn btn-outline-danger" 
+                                            data-bs-dismiss="modal">Cancel</a>
+                                            <a href="game.html" class="modalbutton btn btn-danger">Exit</a>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of modal -->
+                            <a href="Multiplying1.jsp" class="exitandplay btn bg-warning col-4 p-3 text-light">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- End of Game Profile  -->
+
+        <!-- Previous and Next Button  -->
+    <div class="container mt-2">
+        <div class="row justify-content-between">
+            <a href="wordscramblekidspf.html#wordscramblekidspf" class="btn btn-danger col-1 text-white p-2" data-bs-toggle="tooltip" title="Word Scramble Game (Kids)"><i class="fa-solid fa-arrow-left"></i> Prev</a>
+            <a href="cardpf.html#cardpf" class="btn btn-danger col-1 text-white p-2"data-bs-toggle="tooltip" title="Card Game (Toddlers)">Next <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+    <!-- End of Previous and Next Button  -->
+
+    <!-- Footer -->
+    <div class="container-fluid bg-dark" id="footer">
+        <div class="footerlogo row">
+            <h2 class="col-4" data-bs-toggle="tooltip" title="Our Website"><img src="images/brain2.png" alt="" width="50px">Bee Bee Memory</h2>
+        </div>
+        <div class="row bg-dark text-white justify-content-between p-4">
+            <div class="r1 col-3 row">
+                <h3>Contact Us</h3>
+                <ul class="col-6">
+                    
+                    <li><a class="btn btn-outline-danger" href="index.html#index" data-bs-toggle="tooltip" title="Facebook: Bee Bee Memory"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a class="btn btn-outline-danger" href="aboutgame.html#aboutgame" data-bs-toggle="tooltip" title="Messenger: Bee Bee Memory"><i class="fa-brands fa-facebook-messenger"></i></a></li>
+                    <li><a class="btn btn-outline-danger" href="game.html#game" data-bs-toggle="tooltip" title="Instagram: Bee Bee Memory"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a class="btn btn-outline-danger" href="profile.html#profile" data-bs-toggle="tooltip" title="Telegram: Bee Bee Memory"><i class="fa-brands fa-telegram"></i></a></li>
+                    
+                </ul>
+                
+            </div>
+            <div class="r2 col-3">
+                <ul>
+                    <h3>Website Links</h3>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutgame.html">About Games</a></li>
+                    <li><a href="game.html#game">Games</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="leaderboard.html">Leaderboard</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="r3 col-3">    
+                <ul>
+                    <h3>Game Links</h3>
+                    <li><a href="mathpf.html#mathpf" data-bs-toggle="tooltip" title="kids level">Math Game</a></li>
+                    <li><a href="color cardpf.html#colorcardpf" data-bs-toggle="tooltip" title="kids level">Color Card Game</a></li>
+                    <li><a href="fruitcardkidspf.html#fruitcardkidspf" data-bs-toggle="tooltip" title="kids level">Fruit Card Game</a></li>
+                    <li><a href="guesswordkidspf.html#guesswordkidspf" data-bs-toggle="tooltip" title="kids level">Guess Word Game</a></li>
+                    <li><a href="wordscramblekidspf.html#wordscramblekidspf" data-bs-toggle="tooltip" title="kids level">Word Scramble Game</a></li>
+                    <li><a href="multiplyingpf.html#multiplyingpf" data-bs-toggle="tooltip" title="Toddlers level">Multiplying Game</a></li>
+                    <li><a href="cardpf.html#cardpf" data-bs-toggle="tooltip" title="Toddlers level">Card Game</a></li>
+                    <li><a href="guesswordtoddlerspf.html#guesswordtoddlerspf" data-bs-toggle="tooltip" title="Toddlers level">Guess Word Game</a></li>
+                </ul>
+            </div>
+            <div class="r4 col-3">    
+                <ul>
+                    <h3>Game Links</h3>
+                    
+                    <li><a href="wordscrambletoddlerspf.html#wordscrambletoddlerspf" data-bs-toggle="tooltip" title="Toddlers level">Word Scramble Game</a></li>
+                    <li><a href="numberpf.html#numberpf" data-bs-toggle="tooltip" title="Teenagers level">Number Game</a></li>
+                    <li><a href="brainpf.html#brainpf" data-bs-toggle="tooltip" title="Teenagers level">Brain Game</a></li>
+                    <li><a href="guesswordteenagerspf.html#guesswordteenagerspf" data-bs-toggle="tooltip" title="Teenagers level">Guess Word Game</a></li>
+                    <li><a href="wordscrambleteenagerspf.html#wordscrambleteenagerspf" data-bs-toggle="tooltip" title="Teenagers level">Word Scramble Game</a></li>
+                    <li><a href="2playerscardpf.html#2playerscardpf" data-bs-toggle="tooltip" title="2 Players Type">Card Game</a></li>
+                    <li><a href="2playerstic ta toepf.html#2playerstictatoepf" data-bs-toggle="tooltip" title="2 Players Type">Tic Ta Toe Game</a></li>
+                    <li><a href="2playerscheckerboardpf.html#2playerscheckerboardpf" data-bs-toggle="tooltip" title="2 Players Type">Checkarboard Game</a></li>
+                </ul>
+            </div>
+
+        </div>
+        
+    </div>
+    <div class="container-fluid bg-danger">
+        <div class="footertext column p-2 text-white text-center">
+            <h5 >&copy; copyright! all right reserved</h5>
+            <h6 >Designed By Bee Bee Memory</h6>
+        </div>
+    </div>
+    <!-- End of Footer -->
+</body>
+</html>
